@@ -28,6 +28,7 @@ const { title, description, lang = 'es' } = Astro.props;
   {lang === 'en' && <link rel="alternate" hreflang="es" href={Astro.url.pathname.replace('/en', '') || '/'} />}
   <link rel="alternate" hreflang="x-default" href="https://lpc-services.com/" />
   <meta name="robots" content="index, follow" />
+  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a5ffdc6b29959fc566a7ef2"></script>
 </head>
 <body>
   <a class="skip" href="#main">{lang === 'es' ? 'Saltar al contenido' : 'Skip to content'}</a>
