@@ -1,54 +1,118 @@
 ---
-import { SITE, CONTACT, NAV } from '../config/site';
+import { SITE } from '../config/site';
+import { getCollection } from 'astro:content';
 
 export interface Props {
   lang: 'es' | 'en';
-  currentPath?: string;
 }
 
 const { lang } = Astro.props;
 const currentPath = Astro.url.pathname;
+
+const servicios = (await getCollection('servicios', ({ id }) => id.startsWith(lang === 'en' ? 'en-' : 'es-')))
+  .sort((a, b) => a.data.order - b.data.order);
+
+const prefix = lang === 'en' ? '/en' : '';
+const serviciosHref = `${prefix}/servicios`;
 ---
 
 <nav style="position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:16px;padding:12px 20px;background:rgba(245,244,241,0.94);backdrop-filter:blur(8px);border-bottom:2px solid var(--color-divider)">
-  <a href={lang === 'en' ? '/en/' : '/'} style="display:flex;align-items:center;gap:11px;text-decoration:none;margin-right:auto">
+  <a href={prefix || '/'} style="display:flex;align-items:center;gap:11px;text-decoration:none;margin-right:auto">
     <img src="/assets/lpc-logo.png" alt={`${SITE.name} ${SITE.tagline}`} style="width:42px;height:42px;object-fit:contain" />
     <span style="display:flex;flex-direction:column;line-height:1.05">
       <span style="font-family:var(--font-heading);font-weight:800;font-size:17px;letter-spacing:-0.01em;color:var(--color-accent)">{SITE.name}</span>
       <span style="font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-deep)">{SITE.tagline}</span>
     </span>
   </a>
+
   <div class="nav-links" style="display:none;gap:30px;align-items:center">
-    {
-      NAV.map((item) => {
-        const href = lang === 'en' && item.href === '/' ? '/en/' : lang === 'en' ? `/en${item.href}` : item.href;
-        const isCurrent = currentPath === href;
-        return (
-          <a
-            href={href}
-            aria-current={isCurrent ? 'page' : undefined}
-            style={{
-              color: isCurrent ? 'var(--color-accent)' : 'var(--color-text)',
-              textDecoration: 'none',
-              fontSize: '14px',
-              fontWeight: 600,
-            }}
-          >
-            {lang === 'en' ? item.labelEn : item.label}
-          </a>
-        );
-      })
-    }
+    <!-- Inicio -->
+    <a
+      href={prefix || '/'}
+      aria-current={currentPath === (prefix || '/') ? 'page' : undefined}
+      class="nav-link"
+      style={{
+        color: currentPath === (prefix || '/') ? 'var(--color-accent)' : 'var(--color-text)',
+      }}
+    >
+      {lang === 'en' ? 'Home' : 'Inicio'}
+    </a>
+
+    <!-- Servicios — dropdown -->
+    <div class="dropdown">
+      <a
+        href={serviciosHref}
+        aria-current={currentPath.startsWith(serviciosHref) ? 'page' : undefined}
+        class="nav-link dropdown-trigger"
+        aria-haspopup="true"
+        aria-expanded="false"
+        style={{
+          color: currentPath.startsWith(serviciosHref) ? 'var(--color-accent)' : 'var(--color-text)',
+        }}
+      >
+        {lang === 'en' ? 'Services' : 'Servicios'}
+        <svg class="dropdown-arrow" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:10px;height:10px;transition:transform .2s">
+          <path d="m3 4.5 3 3 3-3"/>
+        </svg>
+      </a>
+      <div class="dropdown-menu" role="menu">
+        {
+          servicios.map((svc) => {
+            const href = `${serviciosHref}/${svc.data.urlSlug}`;
+            return (
+              <a
+                href={href}
+                role="menuitem"
+                class="dropdown-item"
+                aria-current={currentPath === href ? 'page' : undefined}
+              >
+                <span class="dropdown-item-num">{String(svc.data.order).padStart(2, '0')}</span>
+                <span>{lang === 'en' ? svc.data.titleEn : svc.data.title}</span>
+              </a>
+            );
+          })
+        }
+        <div class="dropdown-divider"></div>
+        <a href={serviciosHref} role="menuitem" class="dropdown-item dropdown-item-all">
+          {lang === 'en' ? 'All services' : 'Todos los servicios'} &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Nosotros -->
+    <a
+      href={`${prefix}/nosotros`}
+      aria-current={currentPath === `${prefix}/nosotros` ? 'page' : undefined}
+      class="nav-link"
+      style={{
+        color: currentPath === `${prefix}/nosotros` ? 'var(--color-accent)' : 'var(--color-text)',
+      }}
+    >
+      {lang === 'en' ? 'About' : 'Nosotros'}
+    </a>
+
+    <!-- Contacto -->
+    <a
+      href={`${prefix}/contacto`}
+      aria-current={currentPath === `${prefix}/contacto` ? 'page' : undefined}
+      class="nav-link"
+      style={{
+        color: currentPath === `${prefix}/contacto` ? 'var(--color-accent)' : 'var(--color-text)',
+      }}
+    >
+      {lang === 'en' ? 'Contact' : 'Contacto'}
+    </a>
   </div>
+
   <a
-    href={lang === 'en' ? '/en/contacto' : '/contacto'}
+    href={`${prefix}/contacto`}
     class="btn btn-primary"
     style="white-space:nowrap"
   >
     {lang === 'es' ? 'Consulta gratis' : 'Free consultation'}
   </a>
   <a
-    href="/"
+    href={lang === 'en' ? '/' : '/en/'}
     style={{
       fontSize: '12px',
       fontWeight: 700,
@@ -56,13 +120,124 @@ const currentPath = Astro.url.pathname;
       padding: '4px 8px',
       color: lang === 'en' ? 'var(--color-accent)' : 'var(--color-text-muted)',
     }}
-    aria-label="Switch language"
+    aria-label={lang === 'en' ? 'Cambiar a español' : 'Switch to English'}
   >
-    {lang === 'es' ? 'EN' : 'ES'}
+    {lang === 'en' ? 'ES' : 'EN'}
   </a>
 </nav>
 
 <style>
+  /* ── Base nav-link ── */
+  .nav-link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 200ms cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+  }
+  .nav-link:hover { color: var(--color-accent) !important; }
+
+  /* ── Dropdown wrapper ── */
+  .dropdown {
+    position: relative;
+  }
+  .dropdown-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+  }
+
+  /* ── Dropdown menu ── */
+  .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 220px;
+    background: var(--color-surface);
+    border: 2px solid var(--color-divider);
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+    transform-origin: top center;
+    z-index: 50;
+  }
+
+  /* Hover / focus dentro del wrapper */
+  .dropdown:hover .dropdown-menu,
+  .dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+  .dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  /* ── Flechita del dropdown (triángulo) ── */
+  .dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid var(--color-divider);
+  }
+  .dropdown-menu::after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid var(--color-surface);
+  }
+
+  /* ── Items del dropdown ── */
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text);
+    transition: background 0.15s, color 0.15s;
+    border-bottom: 1px solid var(--color-divider);
+  }
+  .dropdown-item:last-child {
+    border-bottom: none;
+  }
+  .dropdown-item:hover,
+  .dropdown-item[aria-current="page"] {
+    background: var(--color-accent-100);
+    color: var(--color-accent);
+  }
+  .dropdown-item-num {
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: var(--gold-deep);
+    font-weight: 800;
+    min-width: 20px;
+    flex: none;
+  }
+  .dropdown-divider {
+    height: 1px;
+    background: var(--color-divider);
+    margin: 4px 0;
+  }
+  .dropdown-item-all {
+    color: var(--color-accent);
+    font-size: 12px;
+    justify-content: center;
+  }
+
+  /* ── Responsive ── */
   @media (min-width: 820px) {
     .nav-links { display: flex !important; }
   }
