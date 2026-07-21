@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "lpc-services",
+  "pages_build_output_dir": "dist",
+  "pages_build_command": "npm run build",
+  "compatibility_date": "2025-07-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  },
+  "placement": {
+    "mode": "smart"
+  }
+  // NOTE: @astrojs/cloudflare requires a SESSION KV binding for SSR.
+  // Run: wrangler kv:namespace create SESSION
+  // Then add:
+  // "kv_namespaces": [{ "binding": "SESSION", "id": "<namespace-id>" }]
+}

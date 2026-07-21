@@ -1,0 +1,54 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SITE } from '../../config/site';
+---
+
+<Layout
+  title="About us"
+  description="Meet Luis Alberto Pérez Castillo, founder of LPC Services. Over 20 years of legal experience serving your immigration case."
+  lang="en"
+>
+  <section style="background:var(--color-accent-800);color:#fff;padding:40px 0 42px">
+    <div class="wrap">
+      <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold)">About us</span>
+      <h1 style="font-family:var(--font-heading);font-weight:800;font-size:42px;letter-spacing:-0.02em;color:#fff;margin:10px 0 0">Our story</h1>
+      <p style="font-size:16px;line-height:1.6;color:rgba(255,255,255,0.82);margin:16px 0 0;max-width:52ch">Meet Luis Alberto Pérez Castillo and the experience behind every case we prepare.</p>
+    </div>
+  </section>
+
+  <section style="padding:44px 0 52px">
+    <div class="wrap" style="display:grid;grid-template-columns:1fr;gap:32px">
+      <div style="display:grid;grid-template-columns:1fr;gap:24px">
+        <div style="background:var(--color-surface);border:2px solid var(--color-divider);padding:24px">
+          <h2 style="font-family:var(--font-heading);font-weight:800;font-size:24px">Luis Alberto Pérez Castillo</h2>
+          <p style="font-size:13px;letter-spacing:0.02em;color:var(--color-accent);font-weight:600;margin:4px 0 16px">Founder / CEO</p>
+          <p style="font-size:15px;line-height:1.65;color:var(--color-text-soft);margin:0 0 14px">Attorney specialized in Labor Law with over 20 years of experience advising companies in conflict prevention and organizational stability. Today he applies that same analytical and procedural approach to immigration case preparation in the United States, under the supervision of a licensed attorney.</p>
+          <p style="font-size:12.5px;line-height:1.55;color:var(--color-text-muted);margin:0">Attorney educated in Venezuela, not licensed to practice in the United States.</p>
+        </div>
+      </div>
+      <div style="background:var(--color-surface);border:2px solid var(--color-divider);padding:24px">
+        <h2 style="font-family:var(--font-heading);font-weight:800;font-size:20px;margin-bottom:16px">Professional background</h2>
+        <div style="display:grid;gap:0;border-top:2px solid var(--color-divider)">
+          <div style="display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--color-divider)">
+            <span style="font-family:var(--font-heading);font-weight:800;color:var(--gold);font-size:13px;min-width:20px">✦</span>
+            <div><p style="font-size:14px;font-weight:600;margin:0">Immigration Case Analyst</p><p style="font-size:12.5px;color:var(--color-text-muted);margin:2px 0 0">Law Office of David Stewart, USA · 2024–present</p></div>
+          </div>
+          <div style="display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--color-divider)">
+            <span style="font-family:var(--font-heading);font-weight:800;color:var(--gold);font-size:13px;min-width:20px">✦</span>
+            <div><p style="font-size:14px;font-weight:600;margin:0">Specialized Immigration Law Training (U.S.)</p><p style="font-size:12.5px;color:var(--color-text-muted);margin:2px 0 0">Defensive Asylum · Family Petitions · Waivers · U Visa · FOIA</p></div>
+          </div>
+          <div style="display:flex;gap:14px;padding:14px 0">
+            <span style="font-family:var(--font-heading);font-weight:800;color:var(--gold);font-size:13px;min-width:20px">✦</span>
+            <div><p style="font-size:14px;font-weight:600;margin:0">Associate Degree in Paralegal Studies — in progress</p><p style="font-size:12.5px;color:var(--color-text-muted);margin:2px 0 0">Kelbert University, USA · est. completion May 2027</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @media (min-width: 820px) {
+    section .wrap { grid-template-columns: 0.7fr 1.3fr !important; }
+  }
+</style>

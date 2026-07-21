@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="_ds/modernist-69bb539b-b2b8-4884-b71e-9caa10a8b0ce/styles.css" />
+<script src="_ds/modernist-69bb539b-b2b8-4884-b71e-9caa10a8b0ce/_ds_bundle.js"></script>
+<script src="image-slot.js"></script>
+<style>
+:root{
+  --color-bg:#f5f4f1;--color-surface:#ffffff;--color-text:#1a2333;--color-accent:#16345c;
+  --color-divider:color-mix(in srgb,#1a2333 20%,transparent);
+  --color-accent-100:#eef2f8;--color-accent-200:#d7e0ee;--color-accent-300:#aec2dd;
+  --color-accent-600:#0f2848;--color-accent-700:#0b1d36;--color-accent-800:#081627;
+  --gold:#a9834a;--gold-deep:#6f5426;--gold-tint:#f3ecdd;--wa:#22b45a;--wa-dark:#1a9048;
+}
+body{margin:0;background:var(--color-bg);color:var(--color-text);text-wrap:pretty;-webkit-font-smoothing:antialiased}
+a{color:var(--color-accent)}a:hover{color:var(--gold-deep)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.nav-links{display:none}
+.svc-hero{display:grid;grid-template-columns:1fr;gap:0}
+.svc-hero-img{order:-1;min-height:230px}
+.svc-h{font-size:42px;line-height:1.02}
+.step-grid,.doc-grid{display:grid;grid-template-columns:1fr;gap:0}
+.step-grid > *,.doc-grid > *{border-top:1px solid var(--color-divider)}
+@media(min-width:720px){
+  .doc-grid{grid-template-columns:1fr 1fr}
+}
+@media(min-width:820px){
+  .wrap{padding:0 40px}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .svc-hero{grid-template-columns:1.02fr 0.98fr}
+  .svc-hero-img{order:0;min-height:100%}
+  .svc-h{font-size:70px;line-height:0.98}
+}
+@keyframes wapulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--wa) 60%,transparent)}70%{box-shadow:0 0 0 16px transparent}100%{box-shadow:0 0 0 0 transparent}}
+@media(prefers-reduced-motion:reduce){.wa-float{animation:none!important}}
+</style>
+</helmet>
+
+<div style="min-height:100vh">
+
+<nav style="position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:16px;padding:12px 20px;background:rgba(245,244,241,0.94);backdrop-filter:blur(8px);border-bottom:2px solid var(--color-divider)">
+  <a href="LPC Services.dc.html" style="display:flex;align-items:center;gap:11px;text-decoration:none;margin-right:auto">
+    <img src="assets/lpc-logo.png" alt="LPC Immigration Services" style="width:42px;height:42px;object-fit:contain" />
+    <span style="display:flex;flex-direction:column;line-height:1.05">
+      <span style="font-family:var(--font-heading);font-weight:800;font-size:17px;letter-spacing:-0.01em;color:var(--color-accent)">LPC Services</span>
+      <span style="font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-deep)">Immigration Services</span>
+    </span>
+  </a>
+  <div class="nav-links">
+    <a href="LPC Services.dc.html" style="color:var(--color-text);text-decoration:none;font-size:14px;font-weight:600">Inicio</a>
+    <a href="Servicio.dc.html" aria-current="page" style="color:var(--color-accent);text-decoration:none;font-size:14px;font-weight:600">Servicios</a>
+    <a href="Nosotros.dc.html" style="color:var(--color-text);text-decoration:none;font-size:14px;font-weight:600">Nosotros</a>
+    <a href="Contacto.dc.html" style="color:var(--color-text);text-decoration:none;font-size:14px;font-weight:600">Contacto</a>
+  </div>
+  <a href="#contacto" class="btn btn-primary" style="white-space:nowrap">Consulta gratis</a>
+</nav>
+
+<div class="wrap" style="padding-top:16px;padding-bottom:2px">
+  <p style="font-size:12px;letter-spacing:0.04em;color:color-mix(in srgb,var(--color-text) 55%,transparent);margin:0"><a href="LPC Services.dc.html" style="text-decoration:none;color:inherit">Inicio</a> &nbsp;/&nbsp; <a href="LPC Services.dc.html#servicios" style="text-decoration:none;color:inherit">Servicios</a> &nbsp;/&nbsp; <span style="color:var(--color-accent)">Visa Juvenil (SIJS)</span></p>
+</div>
+
+<section style="position:relative;background:var(--color-accent-800);overflow:hidden">
+  <div class="grayscale" style="position:absolute;inset:0"><image-slot id="svc-hero-img" shape="rect" placeholder="Foto: menores o familia (B&N)" style="width:100%;height:100%"></image-slot></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,22,39,.58) 0%,rgba(8,22,39,.30) 42%,rgba(8,22,39,.94) 100%)"></div>
+  <div class="wrap" style="position:relative;min-height:clamp(540px,78vh,720px);display:flex;flex-direction:column;justify-content:flex-end;padding-top:64px;padding-bottom:52px">
+      <span style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:16px">Servicio · Menores de edad</span>
+      <h1 class="svc-h" style="font-family:var(--font-heading);font-weight:800;letter-spacing:-0.025em;color:#fff;margin:0;max-width:16ch;text-wrap:balance">Asegurando el <span style="color:var(--gold)">futuro</span> de los menores</h1>
+      <div style="margin-top:18px"><span style="display:inline-flex;align-items:center;font-family:var(--font-heading);font-weight:800;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#fff;border:1px solid rgba(255,255,255,.42);padding:5px 12px">Visa Juvenil · SIJS</span></div>
+      <p style="font-size:16px;line-height:1.6;color:rgba(255,255,255,0.9);margin:18px 0 0;max-width:52ch">Muchos no saben que los menores podrían calificar para un estatus legal permanente. La Visa Juvenil (SIJS) es una vía real y vigente para proteger a los jóvenes que más lo necesitan.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:26px">
+        <a href="#contacto" class="btn btn-primary" style="background:#fff;color:var(--color-accent-800);padding:12px 20px;font-size:15px" style-hover="background:var(--gold-tint)">Consulta gratis</a>
+        <a href="https://wa.me/12065725753" target="_blank" rel="noopener" class="btn" style="background:var(--wa);color:#fff;padding:12px 18px;font-size:15px;gap:9px" style-hover="background:var(--wa-dark)">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:19px;height:19px;display:block"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+  </div>
+</section>
+
+<section style="padding:48px 0 8px">
+  <div class="wrap" style="max-width:760px">
+    <span style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-deep);font-weight:600">Qué es</span>
+    <h2 style="font-family:var(--font-heading);font-weight:800;font-size:26px;letter-spacing:-0.02em;margin:10px 0 14px">¿Qué es la Visa Juvenil?</h2>
+    <p style="font-size:16px;line-height:1.7;color:color-mix(in srgb,var(--color-text) 82%,transparent);margin:0 0 14px">Es un programa que ampara a menores de edad que han sufrido abandono, abuso o negligencia por parte de uno o ambos progenitores, permitiéndoles obtener una vía hacia la residencia permanente.</p>
+    <p style="font-size:16px;line-height:1.7;color:color-mix(in srgb,var(--color-text) 82%,transparent);margin:0">Detrás de cada trámite hay una historia de sacrificio y ganas de triunfar. Te ayudamos a estructurar el caso paso a paso, de forma impecable y con total cuidado.</p>
+  </div>
+</section>
+
+<section style="padding:24px 0 8px">
+  <div class="wrap" style="max-width:900px">
+    <div style="background:var(--color-accent);color:#fff;padding:34px 26px;display:flex;flex-direction:column;gap:8px">
+      <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold)">Un pasado difícil, pero</span>
+      <p style="font-family:var(--font-heading);font-weight:800;font-size:clamp(30px,7vw,52px);line-height:0.98;letter-spacing:-0.02em;margin:0;color:#fff">la Visa Juvenil abre su <span style="color:var(--gold)">futuro</span>.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding:40px 0 8px">
+  <div class="wrap" style="max-width:900px">
+    <span style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-deep);font-weight:600">Lo que debes saber antes de iniciar</span>
+    <h2 style="font-family:var(--font-heading);font-weight:800;font-size:26px;letter-spacing:-0.02em;margin:10px 0 24px">Antes de armar la carpeta</h2>
+    <div class="step-grid" style="border-top:2px solid var(--color-divider)">
+      <div style="display:flex;gap:20px;padding:22px 4px">
+        <span style="font-family:var(--font-heading);font-weight:800;font-size:15px;color:var(--gold);min-width:34px">01</span>
+        <div><h3 style="font-family:var(--font-heading);font-weight:800;font-size:19px;margin:0 0 6px">¡El tiempo corre en tu contra!</h3><p style="font-size:14.5px;line-height:1.65;color:color-mix(in srgb,var(--color-text) 74%,transparent);margin:0;max-width:58ch">La edad límite para solicitar este amparo cambia según las leyes del estado donde vivas. Es urgente armar la carpeta estatal antes de que el menor cumpla la mayoría de edad; dejar pasar el tiempo puede cerrar esta puerta.</p></div>
+      </div>
+      <div style="display:flex;gap:20px;padding:22px 4px">
+        <span style="font-family:var(--font-heading);font-weight:800;font-size:15px;color:var(--gold);min-width:34px">02</span>
+        <div><h3 style="font-family:var(--font-heading);font-weight:800;font-size:19px;margin:0 0 6px">¿El menor trabaja con un ITIN?</h3><p style="font-size:14.5px;line-height:1.65;color:color-mix(in srgb,var(--color-text) 74%,transparent);margin:0;max-width:58ch">Si el joven trabaja y declara impuestos con un Tax ID, es fundamental recibir asesoría técnica: el SIJS exige reglas estrictas de dependencia y declarar ingresos de forma incorrecta podría poner en riesgo el proceso.</p></div>
+      </div>
+      <div style="display:flex;gap:20px;padding:22px 4px">
+        <span style="font-family:var(--font-heading);font-weight:800;font-size:15px;color:var(--gold);min-width:34px">03</span>
+        <div><h3 style="font-family:var(--font-heading);font-weight:800;font-size:19px;margin:0 0 6px">Estado civil: debe mantenerse soltero</h3><p style="font-size:14.5px;line-height:1.65;color:color-mix(in srgb,var(--color-text) 74%,transparent);margin:0;max-width:58ch">Es indispensable que el menor se mantenga soltero durante el proceso. Cambiar de estado civil altera la estructura del caso y puede anular la elegibilidad.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:40px 0 8px">
+  <div class="wrap" style="max-width:900px">
+    <span style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-deep);font-weight:600">Documentación que preparamos</span>
+    <h2 style="font-family:var(--font-heading);font-weight:800;font-size:26px;letter-spacing:-0.02em;margin:10px 0 24px">Nada queda al azar</h2>
+    <div class="doc-grid" style="border-top:2px solid var(--color-divider);border-left:2px solid var(--color-divider)">
+      <div style="display:flex;align-items:center;gap:13px;padding:16px 18px;border-right:1px solid var(--color-divider)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.8" style="width:20px;height:20px;flex:none"><path d="M20 6 9 17l-5-5"/></svg><span style="font-size:14.5px">Acta de nacimiento del menor</span></div>
+      <div style="display:flex;align-items:center;gap:13px;padding:16px 18px;border-right:1px solid var(--color-divider)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.8" style="width:20px;height:20px;flex:none"><path d="M20 6 9 17l-5-5"/></svg><span style="font-size:14.5px">¿El menor trabaja con un ITIN?</span></div>
+      <div style="display:flex;align-items:center;gap:13px;padding:16px 18px;border-right:1px solid var(--color-divider)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.8" style="width:20px;height:20px;flex:none"><path d="M20 6 9 17l-5-5"/></svg><span style="font-size:14.5px">Pruebas de abuso, abandono o negligencia</span></div>
+      <div style="display:flex;align-items:center;gap:13px;padding:16px 18px;border-right:1px solid var(--color-divider)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.8" style="width:20px;height:20px;flex:none"><path d="M20 6 9 17l-5-5"/></svg><span style="font-size:14.5px">Declaraciones de apoyo y soportes</span></div>
+      <div style="display:flex;align-items:center;gap:13px;padding:16px 18px;border-right:1px solid var(--color-divider)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.8" style="width:20px;height:20px;flex:none"><path d="M20 6 9 17l-5-5"/></svg><span style="font-size:14.5px">Identificación y registros migratorios</span></div>
+      <div style="display:flex;align-items:center;gap:13px;padding:16px 18px;border-right:1px solid var(--color-divider)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.8" style="width:20px;height:20px;flex:none"><path d="M20 6 9 17l-5-5"/></svg><span style="font-size:14.5px">Índice y organización del expediente</span></div>
+    </div>
+    <p style="font-size:12.5px;color:color-mix(in srgb,var(--color-text) 55%,transparent);margin:14px 0 0">En la consulta le entregamos la lista exacta según su caso; no necesita tenerlo todo desde el inicio.</p>
+  </div>
+</section>
+
+<section id="contacto" style="background:var(--color-accent-800);color:#fff;padding:48px 0 52px;margin-top:44px">
+  <div class="wrap" style="max-width:760px;text-align:center">
+    <h2 style="font-family:var(--font-heading);font-weight:800;font-size:clamp(26px,5vw,38px);letter-spacing:-0.02em;color:#fff;margin:0 0 12px">Protege su futuro hoy</h2>
+    <p style="font-size:15px;line-height:1.6;color:rgba(255,255,255,0.8);margin:0 auto 26px;max-width:46ch">No dejes el futuro de tus hijos al azar. Envíanos un mensaje y agenda una orientación rápida por WhatsApp.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
+      <a href="https://wa.me/12065725753" target="_blank" rel="noopener" class="btn" style="background:var(--wa);color:#fff;padding:13px 22px;font-size:15px;gap:9px" style-hover="background:var(--wa-dark)">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:19px;height:19px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        Escribir por WhatsApp
+      </a>
+      <a href="Contacto.dc.html" class="btn btn-primary" style="background:#fff;color:var(--color-accent-800);padding:13px 22px;font-size:15px" style-hover="background:var(--gold-tint)">Formulario de contacto</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap" style="padding-top:8px;padding-bottom:28px"><p style="font-size:12px;line-height:1.55;color:color-mix(in srgb,var(--color-text) 55%,transparent);margin:0;padding:14px 16px;border-left:3px solid var(--color-divider);background:var(--color-surface)">LPC Immigration Services LLC no es una firma de abogados; trabajamos en coordinación con abogados licenciados cuando la representación legal es requerida.</p></div>
+
+<footer style="background:var(--color-accent-800);color:rgba(255,255,255,0.6);border-top:1px solid rgba(255,255,255,0.12);padding:26px 0">
+  <div class="wrap" style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;justify-content:space-between">
+    <div style="display:flex;align-items:center;gap:11px">
+      <img src="assets/lpc-logo.png" alt="LPC" style="width:34px;height:34px;object-fit:contain;filter:invert(1) grayscale(1);opacity:.85" />
+      <span style="font-size:12.5px">© 2026 LPC Immigration Services</span>
+    </div>
+    <span style="font-size:11.5px;color:rgba(255,255,255,0.42)">Preparación de documentos migratorios · Atención en español</span>
+  </div>
+</footer>
+
+<a href="https://wa.me/12065725753" target="_blank" rel="noopener" class="wa-float" aria-label="Escríbanos por WhatsApp" style="position:fixed;right:16px;bottom:16px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,0.28);animation:wapulse 2.4s infinite" style-hover="background:var(--wa-dark)">
+  <svg viewBox="0 0 24 24" fill="currentColor" style="width:30px;height:30px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:420,&quot;height&quot;:900}}"></script>
+</body>
+</html>

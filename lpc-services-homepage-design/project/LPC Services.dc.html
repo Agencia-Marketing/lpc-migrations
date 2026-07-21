@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="_ds/modernist-69bb539b-b2b8-4884-b71e-9caa10a8b0ce/styles.css" />
+<script src="_ds/modernist-69bb539b-b2b8-4884-b71e-9caa10a8b0ce/_ds_bundle.js"></script>
+<script src="image-slot.js"></script>
+<style>
+:root{
+  --color-bg:#f5f4f1;
+  --color-surface:#ffffff;
+  --color-text:#1a2333;
+  --color-accent:#16345c;
+  --color-divider:color-mix(in srgb,#1a2333 20%,transparent);
+  --color-accent-100:#eef2f8;
+  --color-accent-200:#d7e0ee;
+  --color-accent-300:#aec2dd;
+  --color-accent-600:#0f2848;
+  --color-accent-700:#0b1d36;
+  --color-accent-800:#081627;
+  --gold:#a9834a;
+  --gold-deep:#6f5426;
+  --gold-tint:#f3ecdd;
+  --wa:#22b45a;
+  --wa-dark:#1a9048;
+}
+body{margin:0;background:var(--color-bg);color:var(--color-text);text-wrap:pretty;-webkit-font-smoothing:antialiased}
+a{color:var(--color-accent)}
+a:hover{color:var(--gold-deep)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.nav-links{display:none}
+.hero-img{order:-1;min-height:240px}
+.hero-h{font-size:33px;line-height:1.05}
+.trust-grid,.svc-grid,.tst-grid{display:grid;grid-template-columns:1fr;gap:0}
+.nos-grid,.contact-grid{display:grid;grid-template-columns:1fr;gap:28px}
+.svc-grid > *,.tst-grid > *{border-top:2px solid var(--color-divider)}
+@media(min-width:720px){
+  .trust-grid{grid-template-columns:repeat(3,1fr)}
+  .svc-grid,.tst-grid{grid-template-columns:repeat(3,1fr);gap:0}
+  .svc-grid > *,.tst-grid > *{border-top:none;border-left:2px solid var(--color-divider)}
+  .svc-grid > *:first-child,.tst-grid > *:first-child{border-left:none}
+}
+@media(min-width:820px){
+  .wrap{padding:0 40px}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .hero-grid{display:grid;grid-template-columns:1.04fr 0.96fr}
+  .hero-img{order:0;min-height:100%}
+  .hero-h{font-size:50px;line-height:1.02}
+  .nos-grid{grid-template-columns:0.82fr 1.18fr;gap:48px;align-items:start}
+  .contact-grid{grid-template-columns:1fr 1fr;gap:56px}
+}
+@keyframes wapulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--wa) 60%,transparent)}70%{box-shadow:0 0 0 16px transparent}100%{box-shadow:0 0 0 0 transparent}}
+@media(prefers-reduced-motion:reduce){.wa-float{animation:none!important}}
+details[open] .faq-plus{transform:rotate(45deg)}
+</style>
+</helmet>
+
+<div style="min-height:100vh">
+
+<nav style="position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:16px;padding:12px 20px;background:rgba(245,244,241,0.94);backdrop-filter:blur(8px);border-bottom:2px solid var(--color-divider)">
+  <a href="#top" style="display:flex;align-items:center;gap:11px;text-decoration:none;margin-right:auto">
+    <img src="assets/lpc-logo.png" alt="LPC Immigration Services" style="width:42px;height:42px;object-fit:contain" />
+    <span style="display:flex;flex-direction:column;line-height:1.05">
+      <span style="font-family:var(--font-heading);font-weight:800;font-size:17px;letter-spacing:-0.01em;color:var(--color-accent)">LPC Services</span>
+      <span style="font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-deep)">Immigration Services</span>
+    </span>
+  </a>
+  <div class="nav-links">
+    <a href="#top" aria-current="page" style="color:var(--color-accent);text-decoration:none;font-size:14px;font-weight:600">Inicio</a>
+    <a href="Servicio.dc.html" style="color:var(--color-text);text-decoration:none;font-size:14px;font-weight:600">Servicios</a>
+    <a href="Nosotros.dc.html" style="color:var(--color-text);text-decoration:none;font-size:14px;font-weight:600">Nosotros</a>
+    <a href="Contacto.dc.html" style="color:var(--color-text);text-decoration:none;font-size:14px;font-weight:600">Contacto</a>
+  </div>
+  <a href="#contacto" class="btn btn-primary" style="white-space:nowrap">Consulta gratis</a>
+</nav>
+
+<section id="top" style="background:var(--color-accent-800)">
+  <div class="hero-grid">
+    <div style="padding:44px 20px 48px;display:flex;flex-direction:column;justify-content:center;max-width:640px;margin:0 auto;width:100%">
+      <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:18px">Preparación de casos migratorios · EE. UU.</span>
+      <h1 class="hero-h" style="font-family:var(--font-heading);font-weight:800;letter-spacing:-0.02em;color:#fff;margin:0">Su caso migratorio, preparado con rigor de <span style="color:var(--gold)">despacho</span>.</h1>
+      <p style="font-size:16px;line-height:1.6;color:rgba(255,255,255,0.82);margin:20px 0 0;max-width:44ch">Análisis técnico y preparación documental de su expediente, con más de 20 años de experiencia legal y bajo la supervisión de un abogado licenciado.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">
+        <a href="#contacto" class="btn btn-primary" style="background:#fff;color:var(--color-accent-800);padding:12px 20px;font-size:15px" style-hover="background:var(--gold-tint)">Consulta gratis</a>
+        <a href="https://wa.me/12065788205" target="_blank" rel="noopener" class="btn" style="background:var(--wa);color:#fff;padding:12px 18px;font-size:15px;gap:9px" style-hover="background:var(--wa-dark)">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:19px;height:19px;display:block"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="hero-img grayscale" style="position:relative;background:#0d1c30">
+      <image-slot id="lpc-hero" shape="rect" placeholder="Foto: familia o persona frente a oficina (B&N)" style="width:100%;height:100%;position:absolute;inset:0"></image-slot>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--color-accent);color:#fff">
+  <div class="wrap trust-grid" style="padding:0">
+    <div style="padding:18px 8px;display:flex;align-items:center;gap:12px;justify-content:center">
+      <span style="font-family:var(--font-heading);font-weight:800;font-size:26px;color:var(--gold);line-height:1">20+</span>
+      <span style="font-size:13px;line-height:1.35;color:rgba(255,255,255,0.9)">años de experiencia legal</span>
+    </div>
+    <div style="padding:18px 8px;display:flex;align-items:center;gap:12px;justify-content:center;border-top:1px solid rgba(255,255,255,0.16)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" style="width:24px;height:24px;flex:none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span style="font-size:13px;line-height:1.35;color:rgba(255,255,255,0.9)">Casos de asilo afirmativo y defensivo</span>
+    </div>
+    <div style="padding:18px 8px;display:flex;align-items:center;gap:12px;justify-content:center;border-top:1px solid rgba(255,255,255,0.16)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" style="width:24px;height:24px;flex:none"><path d="M20 6 9 17l-5-5"/></svg>
+      <span style="font-size:13px;line-height:1.35;color:rgba(255,255,255,0.9)">Bajo supervisión de abogado licenciado</span>
+    </div>
+  </div>
+</section>
+
+<section id="servicios" style="padding:52px 0 8px">
+  <div class="wrap">
+    <span style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-deep);font-weight:600">Servicios</span>
+    <h2 style="font-family:var(--font-heading);font-weight:800;font-size:30px;letter-spacing:-0.02em;margin:10px 0 0;max-width:16ch">Acompañamiento para cada etapa de su proceso</h2>
+    <p style="font-size:15px;line-height:1.6;color:color-mix(in srgb,var(--color-text) 72%,transparent);max-width:52ch;margin:14px 0 0">Preparamos y organizamos su expediente con estándares estrictos de coherencia y evidencia documental.</p>
+  </div>
+  <div class="wrap svc-grid" style="margin-top:36px;border-top:2px solid var(--color-divider)">
+    <div style="padding:28px 22px 30px;display:flex;flex-direction:column">
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.7" style="width:30px;height:30px"><rect x="4" y="3" width="16" height="18"/><path d="M9 3v3h6V3M8 11h8M8 15h5"/></svg>
+      <span style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-deep);margin-top:20px">01</span>
+      <h3 style="font-family:var(--font-heading);font-weight:800;font-size:20px;margin:6px 0 0">Planificación de Casos</h3>
+      <p style="font-size:14px;line-height:1.6;color:color-mix(in srgb,var(--color-text) 74%,transparent);margin:10px 0 0;flex:1">Evaluación técnica de su situación, identificación de la vía adecuada y una estrategia documental clara antes de presentar.</p>
+      <a href="#contacto" style="font-family:var(--font-heading);font-weight:800;font-size:13px;text-decoration:none;color:var(--color-accent);margin-top:18px;display:inline-flex;align-items:center;gap:6px">Consultar &rarr;</a>
+    </div>
+    <div style="padding:28px 22px 30px;display:flex;flex-direction:column">
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.7" style="width:30px;height:30px"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+      <span style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-deep);margin-top:20px">02</span>
+      <h3 style="font-family:var(--font-heading);font-weight:800;font-size:20px;margin:6px 0 0">Asilo Afirmativo y Defensivo</h3>
+      <p style="font-size:14px;line-height:1.6;color:color-mix(in srgb,var(--color-text) 74%,transparent);margin:10px 0 0;flex:1">Estructuramos su narrativa y la evidencia probatoria, y apoyamos la preparación técnica del Formulario I-589.</p>
+      <a href="Servicio.dc.html" style="font-family:var(--font-heading);font-weight:800;font-size:13px;text-decoration:none;color:var(--color-accent);margin-top:18px;display:inline-flex;align-items:center;gap:6px">Ver servicio &rarr;</a>
+    </div>
+    <div style="padding:28px 22px 30px;display:flex;flex-direction:column">
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.7" style="width:30px;height:30px"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5 7 22l5-3 5 3-1.5-9.5"/></svg>
+      <span style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-deep);margin-top:20px">03</span>
+      <h3 style="font-family:var(--font-heading);font-weight:800;font-size:20px;margin:6px 0 0">Visa EB-2 NIW</h3>
+      <p style="font-size:14px;line-height:1.6;color:color-mix(in srgb,var(--color-text) 74%,transparent);margin:10px 0 0;flex:1">Preparación de la petición por Interés Nacional para perfiles profesionales, con soporte de méritos y documentación.</p>
+      <a href="#contacto" style="font-family:var(--font-heading);font-weight:800;font-size:13px;text-decoration:none;color:var(--color-accent);margin-top:18px;display:inline-flex;align-items:center;gap:6px">Consultar &rarr;</a>
+    </div>
+  </div>
+  <div class="wrap" style="padding-top:24px;padding-bottom:8px;display:flex;flex-wrap:wrap;align-items:center;gap:10px">
+    <span style="font-size:13px;color:color-mix(in srgb,var(--color-text) 60%,transparent)">También:</span>
+    <a href="Servicio Visa Juvenil.dc.html" class="tag tag-neutral" style="text-decoration:none">Visa Juvenil (SIJS) &rarr;</a>
+    <a href="Servicio Visa U.dc.html" class="tag tag-neutral" style="text-decoration:none">Visa U (víctimas de delito) &rarr;</a>
+    <span class="tag tag-neutral">Disolución de matrimonios</span>
+  </div>
+</section>
+
+<div class="wrap"><hr class="hr" /></div>
+
+<section id="nosotros" style="padding:44px 0 48px">
+  <div class="wrap nos-grid">
+    <figure class="grayscale" style="margin:0;background:var(--color-surface);border:2px solid var(--color-divider)">
+      <image-slot id="lpc-founder" shape="rect" placeholder="Foto del fundador (B&N)" style="width:100%;aspect-ratio:4/5"></image-slot>
+    </figure>
+    <div>
+      <span style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-deep);font-weight:600">Nosotros</span>
+      <h2 style="font-family:var(--font-heading);font-weight:800;font-size:28px;letter-spacing:-0.02em;margin:10px 0 2px">Luis Alberto Pérez Castillo</h2>
+      <p style="font-size:13px;letter-spacing:0.02em;color:var(--color-accent);font-weight:600;margin:0 0 16px">Fundador / CEO</p>
+      <p style="font-size:15px;line-height:1.65;color:color-mix(in srgb,var(--color-text) 82%,transparent);margin:0 0 14px">Abogado especialista en Derecho Laboral con más de 20 años de experiencia asesorando empresas en la prevención de conflictos y la estabilidad organizacional. Hoy aplica ese mismo enfoque analítico y procedimental a la preparación de casos migratorios en Estados Unidos, bajo supervisión de abogado licenciado.</p>
+      <p style="font-size:12.5px;line-height:1.55;color:color-mix(in srgb,var(--color-text) 55%,transparent);margin:0 0 22px">Abogado formado en Venezuela, no licenciado para ejercer en Estados Unidos.</p>
+      <div style="display:grid;grid-template-columns:1fr;gap:0;border-top:2px solid var(--color-divider)">
+        <div style="display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--color-divider)">
+          <span style="font-family:var(--font-heading);font-weight:800;color:var(--gold);font-size:13px;min-width:20px">✦</span>
+          <div><p style="font-size:14px;font-weight:600;margin:0">Analista en Preparación de Casos Migratorios</p><p style="font-size:12.5px;color:color-mix(in srgb,var(--color-text) 58%,transparent);margin:2px 0 0">Oficina Legal del Abogado David Stewart, EE. UU. · 2024–presente</p></div>
+        </div>
+        <div style="display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--color-divider)">
+          <span style="font-family:var(--font-heading);font-weight:800;color:var(--gold);font-size:13px;min-width:20px">✦</span>
+          <div><p style="font-size:14px;font-weight:600;margin:0">Formación especializada en Derecho Migratorio (EE. UU.)</p><p style="font-size:12.5px;color:color-mix(in srgb,var(--color-text) 58%,transparent);margin:2px 0 0">Asilo Defensivo · Peticiones familiares · Waivers · U Visa · FOIA</p></div>
+        </div>
+        <div style="display:flex;gap:14px;padding:14px 0">
+          <span style="font-family:var(--font-heading);font-weight:800;color:var(--gold);font-size:13px;min-width:20px">✦</span>
+          <div><p style="font-size:14px;font-weight:600;margin:0">Grado Asociado en Estudios Paralegales — en curso</p><p style="font-size:12.5px;color:color-mix(in srgb,var(--color-text) 58%,transparent);margin:2px 0 0">Kelbert University, EE. UU. · finalización est. mayo 2027</p></div>
+        </div>
+      </div>
+      <a href="Nosotros.dc.html" class="btn btn-secondary" style="margin-top:22px;align-self:flex-start">Conozca al fundador &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section id="testimonios" style="background:var(--color-surface);border-top:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider);padding:48px 0 52px">
+  <div class="wrap">
+    <span style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-deep);font-weight:600">Testimonios</span>
+    <h2 style="font-family:var(--font-heading);font-weight:800;font-size:28px;letter-spacing:-0.02em;margin:10px 0 0">Historias que respaldan nuestro trabajo</h2>
+  </div>
+  <div class="wrap tst-grid" style="margin-top:32px;background:var(--color-bg);border:2px solid var(--color-divider)">
+    <div style="padding:26px 22px;display:flex;flex-direction:column;gap:14px">
+      <p style="font-family:var(--font-heading);font-weight:800;font-size:16px;line-height:1.45;margin:0;flex:1">“Me explicaron cada paso con claridad y prepararon mi caso con un cuidado que me devolvió la tranquilidad.”</p>
+      <div style="display:flex;align-items:center;gap:12px;border-top:1px solid var(--color-divider);padding-top:14px">
+        <span style="width:40px;height:40px;flex:none;border-radius:50%;background:var(--gold-tint);color:var(--gold-deep);display:grid;place-items:center;font-family:var(--font-heading);font-weight:800;font-size:16px">M</span>
+        <div><p style="font-size:13px;font-weight:600;margin:0">María G.</p><p style="font-size:11.5px;letter-spacing:0.04em;text-transform:uppercase;color:var(--color-accent);margin:2px 0 0">Asilo Afirmativo</p></div>
+      </div>
+    </div>
+    <div style="padding:26px 22px;display:flex;flex-direction:column;gap:14px">
+      <p style="font-family:var(--font-heading);font-weight:800;font-size:16px;line-height:1.45;margin:0;flex:1">“La organización de mi expediente fue impecable. Sentí que mi caso estaba en manos serias.”</p>
+      <div style="display:flex;align-items:center;gap:12px;border-top:1px solid var(--color-divider);padding-top:14px">
+        <span style="width:40px;height:40px;flex:none;border-radius:50%;background:var(--gold-tint);color:var(--gold-deep);display:grid;place-items:center;font-family:var(--font-heading);font-weight:800;font-size:16px">J</span>
+        <div><p style="font-size:13px;font-weight:600;margin:0">Jorge R.</p><p style="font-size:11.5px;letter-spacing:0.04em;text-transform:uppercase;color:var(--color-accent);margin:2px 0 0">Visa EB-2 NIW</p></div>
+      </div>
+    </div>
+    <div style="padding:26px 22px;display:flex;flex-direction:column;gap:14px">
+      <p style="font-family:var(--font-heading);font-weight:800;font-size:16px;line-height:1.45;margin:0;flex:1">“En medio del proceso de corte, contar con una preparación tan ordenada marcó la diferencia.”</p>
+      <div style="display:flex;align-items:center;gap:12px;border-top:1px solid var(--color-divider);padding-top:14px">
+        <span style="width:40px;height:40px;flex:none;border-radius:50%;background:var(--gold-tint);color:var(--gold-deep);display:grid;place-items:center;font-family:var(--font-heading);font-weight:800;font-size:15px">H</span>
+        <div><p style="font-size:13px;font-weight:600;margin:0">Familia Herrera</p><p style="font-size:11.5px;letter-spacing:0.04em;text-transform:uppercase;color:var(--color-accent);margin:2px 0 0">Asilo Defensivo</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding:48px 0 52px">
+  <div class="wrap">
+    <span style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-deep);font-weight:600">Preguntas frecuentes</span>
+    <h2 style="font-family:var(--font-heading);font-weight:800;font-size:28px;letter-spacing:-0.02em;margin:10px 0 28px">Respuestas antes de su consulta</h2>
+    <div style="border-top:2px solid var(--color-divider)">
+      <details style="border-bottom:1px solid var(--color-divider)">
+        <summary style="list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;font-family:var(--font-heading);font-weight:800;font-size:16px">¿La primera consulta tiene costo?<span class="faq-plus" style="color:var(--gold);font-size:22px;transition:transform .2s;flex:none">+</span></summary>
+        <p style="font-size:14px;line-height:1.65;color:color-mix(in srgb,var(--color-text) 76%,transparent);margin:0 0 18px;max-width:60ch">No. La consulta inicial es gratuita. En ella evaluamos su situación y le explicamos con claridad las vías disponibles y los siguientes pasos.</p>
+      </details>
+      <details style="border-bottom:1px solid var(--color-divider)">
+        <summary style="list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;font-family:var(--font-heading);font-weight:800;font-size:16px">¿Atienden casos en todo Estados Unidos?<span class="faq-plus" style="color:var(--gold);font-size:22px;transition:transform .2s;flex:none">+</span></summary>
+        <p style="font-size:14px;line-height:1.65;color:color-mix(in srgb,var(--color-text) 76%,transparent);margin:0 0 18px;max-width:60ch">Sí. Atendemos de forma remota a clientes en cualquier estado, con comunicación constante por WhatsApp, correo y videollamada.</p>
+      </details>
+      <details style="border-bottom:1px solid var(--color-divider)">
+        <summary style="list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;font-family:var(--font-heading);font-weight:800;font-size:16px">¿En qué idioma me atienden?<span class="faq-plus" style="color:var(--gold);font-size:22px;transition:transform .2s;flex:none">+</span></summary>
+        <p style="font-size:14px;line-height:1.65;color:color-mix(in srgb,var(--color-text) 76%,transparent);margin:0 0 18px;max-width:60ch">Toda la atención es en español. Preparamos la documentación en inglés según lo requieran las autoridades, y le explicamos cada documento en su idioma.</p>
+      </details>
+      <details style="border-bottom:1px solid var(--color-divider)">
+        <summary style="list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;font-family:var(--font-heading);font-weight:800;font-size:16px">¿Cuánto tiempo toma preparar mi caso?<span class="faq-plus" style="color:var(--gold);font-size:22px;transition:transform .2s;flex:none">+</span></summary>
+        <p style="font-size:14px;line-height:1.65;color:color-mix(in srgb,var(--color-text) 76%,transparent);margin:0 0 18px;max-width:60ch">Depende del tipo de caso y de la evidencia disponible. Tras la consulta le entregamos un plan con etapas y tiempos estimados para su situación.</p>
+      </details>
+      <details>
+        <summary style="list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;font-family:var(--font-heading);font-weight:800;font-size:16px">¿Qué documentos necesito para empezar?<span class="faq-plus" style="color:var(--gold);font-size:22px;transition:transform .2s;flex:none">+</span></summary>
+        <p style="font-size:14px;line-height:1.65;color:color-mix(in srgb,var(--color-text) 76%,transparent);margin:0 0 18px;max-width:60ch">No necesita tenerlo todo desde el inicio. En la consulta le entregamos una lista clara de documentos según su caso y le acompañamos a reunirlos.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" style="background:var(--color-accent-800);color:#fff;padding:52px 0 56px">
+  <div class="wrap contact-grid">
+    <div>
+      <span style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold)">Contacto</span>
+      <h2 style="font-family:var(--font-heading);font-weight:800;font-size:30px;letter-spacing:-0.02em;color:#fff;margin:10px 0 14px">Agende su consulta gratis</h2>
+      <p style="font-size:15px;line-height:1.6;color:rgba(255,255,255,0.8);margin:0 0 28px;max-width:44ch">Cuéntenos su situación y le responderemos con los siguientes pasos. La consulta inicial no tiene costo.</p>
+      <div style="display:flex;flex-direction:column;gap:2px">
+        <a href="https://wa.me/12065788205" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:13px;padding:15px 16px;background:var(--wa);color:#fff;text-decoration:none" style-hover="background:var(--wa-dark)">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:22px;height:22px;flex:none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          <span><span style="display:block;font-family:var(--font-heading);font-weight:800;font-size:15px">WhatsApp</span><span style="display:block;font-size:12.5px;opacity:.9">+1 206 578 8205</span></span>
+        </a>
+        <a href="mailto:lpcimmigrationservices@gmail.com" style="display:flex;align-items:center;gap:13px;padding:15px 16px;background:rgba(255,255,255,0.06);color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,0.14)" style-hover="background:rgba(255,255,255,0.12)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8" style="width:22px;height:22px;flex:none"><rect x="3" y="5" width="18" height="14"/><path d="m3 6 9 7 9-7"/></svg>
+          <span><span style="display:block;font-family:var(--font-heading);font-weight:800;font-size:15px">Correo</span><span style="display:block;font-size:12.5px;opacity:.9">lpcimmigrationservices@gmail.com</span></span>
+        </a>
+      </div>
+      <div style="display:flex;gap:20px;margin-top:22px;flex-wrap:wrap">
+        <a href="https://instagram.com/lpcservices_llc" target="_blank" rel="noopener" style="font-size:12.5px;color:rgba(255,255,255,0.7);text-decoration:none" style-hover="color:var(--gold)">Instagram @lpcservices_llc</a>
+        <a href="https://www.tiktok.com/@lpcservicesllc" target="_blank" rel="noopener" style="font-size:12.5px;color:rgba(255,255,255,0.7);text-decoration:none" style-hover="color:var(--gold)">TikTok @lpcservicesllc</a>
+        <a href="http://lpc-services.com" target="_blank" rel="noopener" style="font-size:12.5px;color:rgba(255,255,255,0.7);text-decoration:none" style-hover="color:var(--gold)">lpc-services.com</a>
+      </div>
+    </div>
+    <form onSubmit="{{ onSubmit }}" style="background:#fff;color:var(--color-text);padding:26px 22px;display:flex;flex-direction:column;gap:14px">
+      <div class="field"><label for="f-nombre">Nombre completo</label><input id="f-nombre" class="input" type="text" placeholder="Su nombre" required="{{ true }}" /></div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <div class="field" style="flex:1;min-width:140px"><label for="f-tel">WhatsApp / Teléfono</label><input id="f-tel" class="input" type="tel" placeholder="+1 ___ ___ ____" /></div>
+        <div class="field" style="flex:1;min-width:140px"><label for="f-email">Correo</label><input id="f-email" class="input" type="email" placeholder="correo@ejemplo.com" /></div>
+      </div>
+      <div class="field"><label for="f-caso">Tipo de caso</label>
+        <select id="f-caso" class="input">
+          <option>Asilo Afirmativo</option>
+          <option>Asilo Defensivo</option>
+          <option>Visa EB-2 NIW</option>
+          <option>Visa Juvenil (SIJS)</option>
+          <option>Visa U</option>
+          <option>Disolución de matrimonio</option>
+          <option>Planificación de caso</option>
+          <option>No estoy seguro / Otro</option>
+        </select>
+      </div>
+      <div class="field"><label for="f-msg">Cuéntenos su situación</label><textarea id="f-msg" class="input" placeholder="Describa brevemente su caso"></textarea></div>
+      <button type="submit" class="btn btn-primary btn-block" style="justify-content:center;padding:13px;font-size:15px">Enviar y solicitar consulta gratis</button>
+      <p style="font-size:11.5px;color:color-mix(in srgb,var(--color-text) 55%,transparent);margin:0;text-align:center">Le responderemos por WhatsApp o correo en menos de 24 horas.</p>
+    </form>
+  </div>
+</section>
+
+<footer style="background:var(--color-accent-800);color:rgba(255,255,255,0.6);border-top:1px solid rgba(255,255,255,0.12);padding:26px 0">
+  <div class="wrap" style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;justify-content:space-between">
+    <div style="display:flex;align-items:center;gap:11px">
+      <img src="assets/lpc-logo.png" alt="LPC" style="width:34px;height:34px;object-fit:contain;filter:invert(1) grayscale(1);opacity:.85" />
+      <span style="font-size:12.5px">© 2026 LPC Immigration Services</span>
+    </div>
+    <span style="font-size:11.5px;color:rgba(255,255,255,0.42)">Preparación de documentos migratorios · Atención en español</span>
+  </div>
+</footer>
+
+<a href="https://wa.me/12065788205" target="_blank" rel="noopener" class="wa-float" aria-label="Escríbanos por WhatsApp" style="position:fixed;right:16px;bottom:16px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,0.28);animation:wapulse 2.4s infinite" style-hover="background:var(--wa-dark)">
+  <svg viewBox="0 0 24 24" fill="currentColor" style="width:30px;height:30px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:420,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      onSubmit: (e) => { e.preventDefault(); alert('Gracias. Nos pondremos en contacto por WhatsApp o correo en menos de 24 horas.'); }
+    };
+  }
+}
+</script>
+</body>
+</html>

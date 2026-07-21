@@ -1,0 +1,240 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SITE, CONTACT } from '../../config/site';
+import { getCollection } from 'astro:content';
+
+const servicios = (await getCollection('servicios', ({ id }) => id.startsWith('en-')))
+  .sort((a, b) => a.data.order - b.data.order);
+
+const testimonios = (await getCollection('testimonios', ({ id }) => id.startsWith('en/')))
+  .sort((a, b) => a.data.order - b.data.order);
+
+const faqs = (await getCollection('faqs', ({ id }) => id.startsWith('en/')))
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<Layout
+  title="Immigration document preparation"
+  description={SITE.descriptionEn}
+  lang="en"
+>
+  <!-- ── HERO ── -->
+  <section id="top" style="background:var(--color-accent-800)">
+    <div class="hero-grid">
+      <div style="padding:44px 20px 48px;display:flex;flex-direction:column;justify-content:center;max-width:640px;margin:0 auto;width:100%">
+        <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:18px">Immigration case preparation · U.S.</span>
+        <h1 class="hero-h" style="font-family:var(--font-heading);font-weight:800;letter-spacing:-0.02em;color:#fff;margin:0">Your immigration case, prepared with <span style="color:var(--gold)">law-firm rigor</span>.</h1>
+        <p style="font-size:16px;line-height:1.6;color:rgba(255,255,255,0.82);margin:20px 0 0;max-width:44ch">Technical analysis and document preparation for your case, with over 20 years of legal experience under the supervision of a licensed attorney.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">
+          <a href="/en/contacto" class="btn" style="background:#fff;color:var(--color-accent-800);padding:12px 20px;font-size:15px">Free consultation</a>
+          <a href={CONTACT.whatsApp} target="_blank" rel="noopener" class="btn btn-wa" style="padding:12px 18px;font-size:15px;gap:9px">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:19px;height:19px;display:block"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="hero-img grayscale" style="position:relative;background:#0d1c30;min-height:240px">
+        <div style="position:absolute;inset:0;display:grid;place-items:center">
+          <span style="color:rgba(255,255,255,0.3);font-size:14px;letter-spacing:0.04em;text-transform:uppercase">Team photo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TRUST BAR ── -->
+  <section style="background:var(--color-accent);color:#fff">
+    <div class="wrap trust-grid" style="padding:0">
+      <div style="padding:18px 8px;display:flex;align-items:center;gap:12px;justify-content:center">
+        <span style="font-family:var(--font-heading);font-weight:800;font-size:26px;color:var(--gold);line-height:1">20+</span>
+        <span style="font-size:13px;line-height:1.35;color:rgba(255,255,255,0.9)">years of legal experience</span>
+      </div>
+      <div style="padding:18px 8px;display:flex;align-items:center;gap:12px;justify-content:center;border-top:1px solid rgba(255,255,255,0.16)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" style="width:24px;height:24px;flex:none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span style="font-size:13px;line-height:1.35;color:rgba(255,255,255,0.9)">Affirmative & defensive asylum</span>
+      </div>
+      <div style="padding:18px 8px;display:flex;align-items:center;gap:12px;justify-content:center;border-top:1px solid rgba(255,255,255,0.16)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" style="width:24px;height:24px;flex:none"><path d="M20 6 9 17l-5-5"/></svg>
+        <span style="font-size:13px;line-height:1.35;color:rgba(255,255,255,0.9)">Under licensed attorney supervision</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICES ── -->
+  <section id="services" style="padding:52px 0 8px">
+    <div class="wrap">
+      <span class="section-label">Services</span>
+      <h2 class="section-title" style="font-size:30px">Support for every stage of your process</h2>
+      <p class="section-desc">We prepare and organize your file with strict standards of coherence and documentary evidence.</p>
+    </div>
+    <div class="wrap svc-grid" style="margin-top:36px;border-top:2px solid var(--color-divider)">
+      {servicios.map((svc) => (
+        <div style="padding:28px 22px 30px;display:flex;flex-direction:column">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.7" style="width:30px;height:30px">
+            {svc.data.icon === 'briefcase' && <><rect x="4" y="3" width="16" height="18"/><path d="M9 3v3h6V3M8 11h8M8 15h5"/></>}
+            {svc.data.icon === 'shield' && <><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></>}
+            {svc.data.icon === 'heart' && <><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5 7 22l5-3 5 3-1.5-9.5"/></>}
+          </svg>
+          <span style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-deep);margin-top:20px">{String(svc.data.order).padStart(2, '0')}</span>
+          <h3 style="font-family:var(--font-heading);font-weight:800;font-size:20px;margin:6px 0 0">{svc.data.titleEn}</h3>
+          <p style="font-size:14px;line-height:1.6;color:var(--color-text-soft);margin:10px 0 0;flex:1">{svc.data.descriptionEn}</p>
+          <a href={`/en/servicios/${svc.data.urlSlug}`} style="font-family:var(--font-heading);font-weight:800;font-size:13px;text-decoration:none;color:var(--color-accent);margin-top:18px;display:inline-flex;align-items:center;gap:6px">
+            {svc.data.formNumberEn ? `Form ${svc.data.formNumberEn}` : 'View service'} &rarr;
+          </a>
+        </div>
+      ))}
+    </div>
+    <div class="wrap" style="padding-top:24px;padding-bottom:8px;display:flex;flex-wrap:wrap;align-items:center;gap:10px">
+      <span style="font-size:13px;color:var(--color-text-muted)">Also:</span>
+      <a href="/en/servicios/visa-u" class="tag" style="text-decoration:none">U Visa (crime victims) &rarr;</a>
+      <span class="tag">Marriage dissolution</span>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="hr" /></div>
+
+  <!-- ── ABOUT ── -->
+  <section id="about" style="padding:44px 0 48px">
+    <div class="wrap nos-grid">
+      <figure class="grayscale" style="margin:0;background:var(--color-surface);border:2px solid var(--color-divider)">
+        <div style="width:100%;aspect-ratio:4/5;display:grid;place-items:center;background:var(--color-accent-100)">
+          <span style="color:var(--color-text-muted);font-size:14px;letter-spacing:0.04em;text-transform:uppercase">Founder photo</span>
+        </div>
+      </figure>
+      <div>
+        <span class="section-label">About us</span>
+        <h2 style="font-family:var(--font-heading);font-weight:800;font-size:28px;letter-spacing:-0.02em;margin:10px 0 2px">Luis Alberto Pérez Castillo</h2>
+        <p style="font-size:13px;letter-spacing:0.02em;color:var(--color-accent);font-weight:600;margin:0 0 16px">Founder / CEO</p>
+        <p style="font-size:15px;line-height:1.65;color:var(--color-text-soft);margin:0 0 14px">Attorney specialized in Labor Law with over 20 years of experience. Today he applies that same analytical and procedural approach to immigration case preparation in the United States, under the supervision of a licensed attorney.</p>
+        <p style="font-size:12.5px;line-height:1.55;color:var(--color-text-muted);margin:0 0 22px">Attorney educated in Venezuela, not licensed to practice in the United States.</p>
+        <div style="display:grid;grid-template-columns:1fr;gap:0;border-top:2px solid var(--color-divider)">
+          <div style="display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--color-divider)">
+            <span style="font-family:var(--font-heading);font-weight:800;color:var(--gold);font-size:13px;min-width:20px">✦</span>
+            <div><p style="font-size:14px;font-weight:600;margin:0">Immigration Case Analyst</p><p style="font-size:12.5px;color:var(--color-text-muted);margin:2px 0 0">Law Office of David Stewart, USA · 2024–present</p></div>
+          </div>
+          <div style="display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--color-divider)">
+            <span style="font-family:var(--font-heading);font-weight:800;color:var(--gold);font-size:13px;min-width:20px">✦</span>
+            <div><p style="font-size:14px;font-weight:600;margin:0">Specialized Immigration Law Training (U.S.)</p><p style="font-size:12.5px;color:var(--color-text-muted);margin:2px 0 0">Defensive Asylum · Family Petitions · Waivers · U Visa · FOIA</p></div>
+          </div>
+          <div style="display:flex;gap:14px;padding:14px 0">
+            <span style="font-family:var(--font-heading);font-weight:800;color:var(--gold);font-size:13px;min-width:20px">✦</span>
+            <div><p style="font-size:14px;font-weight:600;margin:0">Associate Degree in Paralegal Studies — in progress</p><p style="font-size:12.5px;color:var(--color-text-muted);margin:2px 0 0">Kelbert University, USA · est. completion May 2027</p></div>
+          </div>
+        </div>
+        <a href="/en/nosotros" class="btn btn-secondary" style="margin-top:22px;align-self:flex-start">Meet the founder &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ── -->
+  <section id="testimonials" style="background:var(--color-surface);border-top:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider);padding:48px 0 52px">
+    <div class="wrap">
+      <span class="section-label">Testimonials</span>
+      <h2 style="font-family:var(--font-heading);font-weight:800;font-size:28px;letter-spacing:-0.02em;margin:10px 0 0">Stories that back our work</h2>
+    </div>
+    <div class="wrap tst-grid" style="margin-top:32px;background:var(--color-bg);border:2px solid var(--color-divider)">
+      {testimonios.map((t) => (
+        <div style="padding:26px 22px;display:flex;flex-direction:column;gap:14px">
+          <p style="font-family:var(--font-heading);font-weight:800;font-size:16px;line-height:1.45;margin:0;flex:1">“{t.data.textEn}”</p>
+          <div style="display:flex;align-items:center;gap:12px;border-top:1px solid var(--color-divider);padding-top:14px">
+            <span style="width:40px;height:40px;flex:none;border-radius:50%;background:var(--gold-tint);color:var(--gold-deep);display:grid;place-items:center;font-family:var(--font-heading);font-weight:800;font-size:16px">{t.data.initial}</span>
+            <div><p style="font-size:13px;font-weight:600;margin:0">{t.data.name}</p><p style="font-size:11.5px;letter-spacing:0.04em;text-transform:uppercase;color:var(--color-accent);margin:2px 0 0">{t.data.caseTypeEn}</p></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section id="faq" style="padding:48px 0 52px">
+    <div class="wrap">
+      <span class="section-label">FAQ</span>
+      <h2 style="font-family:var(--font-heading);font-weight:800;font-size:28px;letter-spacing:-0.02em;margin:10px 0 28px">Answers before your consultation</h2>
+      <div style="border-top:2px solid var(--color-divider)">
+        {faqs.map((faq) => (
+          <details style="border-bottom:1px solid var(--color-divider)">
+            <summary style="list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;font-family:var(--font-heading);font-weight:800;font-size:16px">
+              {faq.data.questionEn}
+              <span class="faq-plus" style="color:var(--gold);font-size:22px;transition:transform .2s;flex:none">+</span>
+            </summary>
+            <p style="font-size:14px;line-height:1.65;color:var(--color-text-soft);margin:0 0 18px;max-width:60ch">{faq.data.answerEn}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" style="background:var(--color-accent-800);color:#fff;padding:52px 0 56px">
+    <div class="wrap contact-grid">
+      <div>
+        <span style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold)">Contact</span>
+        <h2 style="font-family:var(--font-heading);font-weight:800;font-size:30px;letter-spacing:-0.02em;color:#fff;margin:10px 0 14px">Book your free consultation</h2>
+        <p style="font-size:15px;line-height:1.6;color:rgba(255,255,255,0.8);margin:0 0 28px;max-width:44ch">Tell us about your situation and we'll reply with the next steps. The initial consultation is free.</p>
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <a href={CONTACT.whatsApp} target="_blank" rel="noopener" style="display:flex;align-items:center;gap:13px;padding:15px 16px;background:var(--wa);color:#fff;text-decoration:none">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:22px;height:22px;flex:none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            <span><span style="display:block;font-family:var(--font-heading);font-weight:800;font-size:15px">WhatsApp</span><span style="display:block;font-size:12.5px;opacity:.9">{CONTACT.whatsAppText}</span></span>
+          </a>
+          <a href={`mailto:${CONTACT.email}`} style="display:flex;align-items:center;gap:13px;padding:15px 16px;background:rgba(255,255,255,0.06);color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,0.14)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8" style="width:22px;height:22px;flex:none"><rect x="3" y="5" width="18" height="14"/><path d="m3 6 9 7 9-7"/></svg>
+            <span><span style="display:block;font-family:var(--font-heading);font-weight:800;font-size:15px">Email</span><span style="display:block;font-size:12.5px;opacity:.9">{CONTACT.email}</span></span>
+          </a>
+        </div>
+      </div>
+      <form action="/api/contacto" method="POST" enctype="multipart/form-data" style="background:#fff;color:var(--color-text);padding:26px 22px;display:flex;flex-direction:column;gap:14px">
+        <div class="field"><label for="f-name">Full name</label><input id="f-name" class="input" type="text" name="nombre" placeholder="Your name" required /></div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <div class="field" style="flex:1;min-width:140px"><label for="f-phone">WhatsApp / Phone</label><input id="f-phone" class="input" type="tel" name="tel" placeholder="+1 ___ ___ ____" /></div>
+          <div class="field" style="flex:1;min-width:140px"><label for="f-email">Email</label><input id="f-email" class="input" type="email" name="email" placeholder="email@example.com" /></div>
+        </div>
+        <div class="field"><label for="f-case">Case type</label>
+          <select id="f-case" class="input" name="caso">
+            <option>Affirmative Asylum</option>
+            <option>Defensive Asylum</option>
+            <option>EB-2 NIW Visa</option>
+            <option>SIJS (Special Immigrant Juvenile)</option>
+            <option>U Visa</option>
+            <option>Marriage dissolution</option>
+            <option>Case planning</option>
+            <option>Not sure / Other</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-msg">Tell us about your situation</label><textarea id="f-msg" class="input" name="msg" placeholder="Briefly describe your case"></textarea></div>
+        <div class="field" style="display:none" aria-hidden="true">
+          <input type="text" name="hp" tabindex="-1" autocomplete="off" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" style="justify-content:center;padding:13px;font-size:15px;cursor:pointer">Send and request free consultation</button>
+        <p style="font-size:11.5px;color:var(--color-text-muted);margin:0;text-align:center">We'll reply by WhatsApp or email within 24 hours.</p>
+      </form>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero-grid { display: block; }
+  .hero-h { font-size: 32px; line-height: 1.04; }
+  .trust-grid { display: grid; grid-template-columns: 1fr; gap: 0; }
+  .svc-grid { display: grid; grid-template-columns: 1fr; gap: 0; }
+  .svc-grid > * { border-top: 2px solid var(--color-divider); }
+  .tst-grid { display: grid; grid-template-columns: 1fr; gap: 0; }
+  .tst-grid > * { border-top: 2px solid var(--color-divider); }
+  .nos-grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
+  .contact-grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
+  details[open] .faq-plus { transform: rotate(45deg); }
+
+  @media (min-width: 720px) {
+    .trust-grid { grid-template-columns: repeat(3, 1fr); }
+    .svc-grid { grid-template-columns: repeat(3, 1fr); gap: 0; }
+    .svc-grid > * { border-top: none; border-left: 2px solid var(--color-divider); }
+    .svc-grid > *:first-child { border-left: none; }
+    .tst-grid { grid-template-columns: repeat(3, 1fr); gap: 0; }
+    .tst-grid > * { border-top: none; border-left: 2px solid var(--color-divider); }
+    .tst-grid > *:first-child { border-left: none; }
+  }
+  @media (min-width: 820px) {
+    .hero-grid { display: grid; grid-template-columns: 1.04fr 0.96fr; }
+    .hero-h { font-size: 50px; line-height: 1.02; }
+    .nos-grid { grid-template-columns: 0.82fr 1.18fr; gap: 48px; align-items: start; }
+    .contact-grid { grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+  }
+</style>

@@ -1,0 +1,25 @@
+---
+import { SITE, CONTACT, SOCIAL } from '../config/site';
+
+export interface Props {
+  lang: 'es' | 'en';
+}
+
+const { lang } = Astro.props;
+---
+
+<footer style="background:var(--color-accent-800);color:rgba(255,255,255,0.6);border-top:1px solid rgba(255,255,255,0.12);padding:26px 0">
+  <div class="wrap" style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;justify-content:space-between">
+    <div style="display:flex;align-items:center;gap:11px">
+      <img src="/assets/lpc-logo.svg" alt={SITE.name} style="width:34px;height:34px;object-fit:contain;filter:grayscale(1) brightness(10);opacity:.85" />
+      <span style="font-size:12.5px">© 2026 {SITE.name}</span>
+    </div>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+      <a href={CONTACT.email} style="font-size:11.5px;color:rgba(255,255,255,0.5);text-decoration:none">{CONTACT.email}</a>
+      <span style="font-size:11.5px;color:rgba(255,255,255,0.3)" aria-hidden="true">·</span>
+      <span style="font-size:11px;color:rgba(255,255,255,0.42)">
+        {lang === 'es' ? 'Preparación de documentos migratorios · Atención en español' : 'Immigration document preparation · Spanish language service'}
+      </span>
+    </div>
+  </div>
+</footer>

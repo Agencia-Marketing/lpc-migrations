@@ -1,0 +1,41 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+  lang?: 'es' | 'en';
+}
+
+const { title, description, lang = 'es' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title} | LPC Services</title>
+  {description && <meta name="description" content={description} />}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="canonical" href={lang === 'en' ? `https://lpc-services.com/en${Astro.url.pathname.replace('/en', '')}` : `https://lpc-services.com${Astro.url.pathname}`} />
+  {lang === 'es' && <link rel="alternate" hreflang="en" href={`https://lpc-services.com/en${Astro.url.pathname}`} />}
+  {lang === 'en' && <link rel="alternate" hreflang="es" href={Astro.url.pathname.replace('/en', '') || '/'} />}
+  <link rel="alternate" hreflang="x-default" href="https://lpc-services.com/" />
+  <meta name="robots" content="index, follow" />
+</head>
+<body>
+  <a class="skip" href="#main">{lang === 'es' ? 'Saltar al contenido' : 'Skip to content'}</a>
+  <Header lang={lang} />
+  <main id="main">
+    <slot />
+  </main>
+  <Footer lang={lang} />
+  <WhatsAppFloat lang={lang} />
+</body>
+</html>

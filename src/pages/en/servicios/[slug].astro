@@ -1,0 +1,55 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { CONTACT } from '../../../config/site';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const servicios = await getCollection('servicios', ({ id }) => id.startsWith('en-'));
+  return servicios.map((svc) => ({
+    params: { slug: svc.data.urlSlug },
+    props: { servicio: svc },
+  }));
+}
+
+const { servicio } = Astro.props;
+const { data, body } = servicio;
+---
+
+<Layout
+  title={data.titleEn}
+  description={data.descriptionEn}
+  lang="en"
+>
+  <section style="background:var(--color-accent-800);color:#fff;padding:40px 0 42px">
+    <div class="wrap">
+      <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold)">Services</span>
+      <h1 style="font-family:var(--font-heading);font-weight:800;font-size:42px;letter-spacing:-0.02em;color:#fff;margin:10px 0 0">{data.titleEn}</h1>
+      {data.formNumberEn && (
+        <span class="tag" style="margin-top:12px;border-color:var(--gold);color:var(--gold)">Form {data.formNumberEn}</span>
+      )}
+    </div>
+  </section>
+
+  <section style="padding:44px 0 52px">
+    <div class="wrap" style="display:grid;grid-template-columns:1fr;gap:32px">
+      <article style="background:var(--color-surface);border:2px solid var(--color-divider);padding:32px">
+        <div class="prose" set:html={body}>
+          <!-- Rendered markdown content -->
+        </div>
+        <div style="margin-top:32px;padding-top:24px;border-top:2px solid var(--color-divider);display:flex;flex-wrap:wrap;gap:12px">
+          <a href="/en/contacto" class="btn btn-primary">Free consultation</a>
+          <a href={CONTACT.whatsApp} target="_blank" rel="noopener" class="btn btn-wa">Contact on WhatsApp</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .prose p { margin-bottom: 1em; line-height: 1.65; color: var(--color-text-soft); }
+  .prose ul { margin: 1em 0; padding-left: 0; list-style: none; }
+  .prose li { padding: 0.35em 0; padding-left: 1.5em; position: relative; color: var(--color-text-soft); }
+  .prose li::before { content: "—"; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+  .prose h2 { font-size: 1.5rem; margin: 1.5em 0 0.5em; }
+  .prose strong:first-child { display: block; font-size: 1.1rem; margin-bottom: 0.5em; color: var(--color-text); }
+</style>
