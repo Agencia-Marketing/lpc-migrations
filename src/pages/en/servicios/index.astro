@@ -1,0 +1,73 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { CONTACT } from '../../../config/site';
+import { getCollection } from 'astro:content';
+
+const servicios = (await getCollection('servicios', ({ id }) => id.startsWith('en-')))
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<Layout
+  title="Services"
+  description="Explore our immigration document preparation services: affirmative asylum, EB-2 NIW visa, U visa and more."
+  lang="en"
+>
+  <section style="background:var(--color-accent-800);color:#fff;padding:40px 0 42px">
+    <div class="wrap">
+      <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold)">Services</span>
+      <h1 style="font-family:var(--font-heading);font-weight:800;font-size:42px;letter-spacing:-0.02em;color:#fff;margin:10px 0 0">Support for every stage</h1>
+      <p style="font-size:16px;line-height:1.6;color:rgba(255,255,255,0.82);margin:16px 0 0;max-width:52ch">We prepare and organize your file with strict standards of documentary evidence, under the supervision of a licensed attorney.</p>
+    </div>
+  </section>
+
+  <section style="padding:44px 0 52px">
+    <div class="wrap" style="display:grid;gap:2px">
+      {
+        servicios.map((svc) => (
+          <a
+            href={`/en/servicios/${svc.data.urlSlug}`}
+            style="display:grid;grid-template-columns:1fr;gap:16px;padding:28px 22px;background:var(--color-surface);border:2px solid var(--color-divider);text-decoration:none;color:inherit"
+          >
+            <div style="display:flex;align-items:flex-start;gap:16px">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.7" style="width:36px;height:36px;flex:none;margin-top:2px">
+                {svc.data.icon === 'briefcase' && <><rect x="4" y="3" width="16" height="18"/><path d="M9 3v3h6V3M8 11h8M8 15h5"/></>}
+                {svc.data.icon === 'shield' && <><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></>}
+                {svc.data.icon === 'heart' && <><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5 7 22l5-3 5 3-1.5-9.5"/></>}
+              </svg>
+              <div>
+                <span style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-deep);font-weight:600">{String(svc.data.order).padStart(2, '0')}</span>
+                <h2 style="font-family:var(--font-heading);font-weight:800;font-size:22px;margin:4px 0 6px">{svc.data.titleEn}</h2>
+                <p style="font-size:14px;line-height:1.6;color:var(--color-text-soft);margin:0">{svc.data.descriptionEn}</p>
+                {svc.data.formNumberEn && (
+                  <span class="tag" style="margin-top:10px;border-color:var(--color-accent-300)">Form {svc.data.formNumberEn}</span>
+                )}
+              </div>
+            </div>
+            <span style="font-family:var(--font-heading);font-weight:800;font-size:13px;color:var(--color-accent);display:inline-flex;align-items:center;gap:6px;justify-self:end">
+              View service &rarr;
+            </span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <section style="background:var(--color-accent-800);color:#fff;padding:48px 0 52px">
+    <div class="wrap" style="display:grid;grid-template-columns:1fr;gap:24px">
+      <h2 style="font-family:var(--font-heading);font-weight:800;font-size:28px;color:#fff">Ready to get started?</h2>
+      <p style="font-size:15px;line-height:1.6;color:rgba(255,255,255,0.8);max-width:44ch">Book a free consultation and find out which service fits your case best.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <a href="/en/contacto" class="btn" style="background:#fff;color:var(--color-accent-800);padding:12px 20px">Free consultation</a>
+        <a href={CONTACT.whatsApp} target="_blank" rel="noopener" class="btn btn-wa" style="padding:12px 18px">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @media (min-width: 720px) {
+    section > .wrap a {
+      grid-template-columns: 1fr auto !important;
+    }
+  }
+</style>
