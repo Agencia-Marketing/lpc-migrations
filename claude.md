@@ -99,7 +99,30 @@ FASE 6 — Corte de dominio y entrega
 
 
 Resumen:
-  No son abogados, pero cuentan con un equipo de abogados para llevar los casos
-  Visas ED2-NIW: Personas con maestria o doctorado con 5 años de experiencia
-  Asilos afirmativos: Aquellas personas que entraron legalmente a estados unidos
-  Visa tipo U: Personas víctimas de delitos en sus países que buscan una salida (asilo) en EUA
+  No son abogados, pero cuentan con un equipo de abogados para llevar los casos.
+  El fundador trabaja como Analista Externo de Casos Migratorios para la Oficina
+  Legal del Abogado David Stuart (ojo: Stuart, no Stewart).
+
+  Los OCHO casos que atienden, todos con página propia en el sitio:
+
+  1. Asilo afirmativo (I-589) — entró CON inspección y NO tiene proceso en corte.
+     Se presenta ante USCIS. Plazo obligatorio: un año desde la llegada.
+  2. Asilo defensivo (I-589) — entró SIN inspección y YA tiene proceso abierto en
+     la corte de inmigración. Se presenta ante el juez (EOIR).
+  3. Visa EB-2 NIW (I-140) — profesionales con maestría o doctorado y experiencia.
+  4. Visa U (I-918) — víctimas de un delito DENTRO de Estados Unidos. El paso
+     decisivo es la certificación policial (I-918B).
+  5. Visa juvenil / SIJS (I-360) — menores con abandono, negligencia o maltrato de
+     uno o ambos progenitores. La edad límite varía por estado (18 o 21): es el
+     factor más crítico del trámite.
+  6. Visa B1/B2 (DS-160) — negocios y turismo, desde fuera del país.
+  7. Ajuste de estatus (I-485) — residencia desde dentro de EE. UU.; requiere
+     entrada inspeccionada, aunque la visa esté vencida.
+  8. Proceso consular (DS-260) — vía habitual de quien entró sin inspección:
+     perdón legal y salida del país para la cita consular.
+
+  Contacto: WhatsApp y teléfono +1 206 572 5753 (fuente de verdad en
+  src/config/site.ts; nunca escribirlo a mano en un componente).
+
+  Estado de despliegue: NADA publicado todavía. No hay CI; hacer push a master no
+  despliega. lpc-services.com sigue sirviendo el sitio anterior hasta la Fase 6.
