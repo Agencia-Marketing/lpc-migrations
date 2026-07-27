@@ -73,6 +73,7 @@ const faqs = (await getCollection('faqs', ({ id }) => id.startsWith('en/')))
             {svc.data.icon === 'briefcase' && <><rect x="4" y="3" width="16" height="18"/><path d="M9 3v3h6V3M8 11h8M8 15h5"/></>}
             {svc.data.icon === 'shield' && <><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></>}
             {svc.data.icon === 'heart' && <><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5 7 22l5-3 5 3-1.5-9.5"/></>}
+            {svc.data.icon === 'scale' && <><path d="M12 3v18M7 21h10M4 7h16"/><path d="M6 7 3 14a3 3 0 0 0 6 0L6 7z"/><path d="M18 7l-3 7a3 3 0 0 0 6 0l-3-7z"/></>}
           </svg>
           <span style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-deep);margin-top:20px">{String(svc.data.order).padStart(2, '0')}</span>
           <h3 style="font-family:var(--font-heading);font-weight:800;font-size:20px;margin:6px 0 0">{svc.data.titleEn}</h3>
@@ -84,9 +85,11 @@ const faqs = (await getCollection('faqs', ({ id }) => id.startsWith('en/')))
       ))}
     </div>
     <div class="wrap" style="padding-top:24px;padding-bottom:8px;display:flex;flex-wrap:wrap;align-items:center;gap:10px">
-      <span style="font-size:13px;color:var(--color-text-muted)">Also:</span>
-      <a href="/en/servicios/visa-u" class="tag" style="text-decoration:none">U Visa (crime victims) &rarr;</a>
-      <span class="tag">Marriage dissolution</span>
+      <span style="font-size:13px;color:var(--color-text-muted)">We also handle:</span>
+      <span class="tag">SIJS (Juvenile Visa)</span>
+      <span class="tag">B1/B2 Visa</span>
+      <span class="tag">Adjustment of Status</span>
+      <span class="tag">Consular Processing</span>
     </div>
   </section>
 
@@ -107,15 +110,15 @@ const faqs = (await getCollection('faqs', ({ id }) => id.startsWith('en/')))
         <div style="display:grid;grid-template-columns:1fr;gap:0;border-top:2px solid var(--color-divider)">
           <div style="display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--color-divider)">
             <span style="font-family:var(--font-heading);font-weight:800;color:var(--gold);font-size:13px;min-width:20px">✦</span>
-            <div><p style="font-size:14px;font-weight:600;margin:0">Immigration Case Analyst</p><p style="font-size:12.5px;color:var(--color-text-muted);margin:2px 0 0">Law Office of David Stewart, USA · 2024–present</p></div>
+            <div><p style="font-size:14px;font-weight:600;margin:0">External Immigration Case Analyst</p><p style="font-size:12.5px;color:var(--color-text-muted);margin:2px 0 0">Law Office of David Stuart, USA · 2024–present</p></div>
           </div>
           <div style="display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--color-divider)">
             <span style="font-family:var(--font-heading);font-weight:800;color:var(--gold);font-size:13px;min-width:20px">✦</span>
-            <div><p style="font-size:14px;font-weight:600;margin:0">Specialized Immigration Law Training (U.S.)</p><p style="font-size:12.5px;color:var(--color-text-muted);margin:2px 0 0">Defensive Asylum · Family Petitions · Waivers · U Visa · FOIA</p></div>
+            <div><p style="font-size:14px;font-weight:600;margin:0">Specialized Immigration Law Training (U.S.)</p><p style="font-size:12.5px;color:var(--color-text-muted);margin:2px 0 0">Defensive Asylum · SIJS (Juvenile Visa) · B1/B2 Visa · EB-2 NIW Visa · Family Petitions · Waivers · U Visa · FOIA</p></div>
           </div>
           <div style="display:flex;gap:14px;padding:14px 0">
             <span style="font-family:var(--font-heading);font-weight:800;color:var(--gold);font-size:13px;min-width:20px">✦</span>
-            <div><p style="font-size:14px;font-weight:600;margin:0">Associate Degree in Paralegal Studies — in progress</p><p style="font-size:12.5px;color:var(--color-text-muted);margin:2px 0 0">Kelbert University, USA · est. completion May 2027</p></div>
+            <div><p style="font-size:14px;font-weight:600;margin:0">Associate Degree in Paralegal Studies — in progress</p><p style="font-size:12.5px;color:var(--color-text-muted);margin:2px 0 0">Kelbert University, USA · est. completion December 2026</p></div>
           </div>
         </div>
         <a href="/en/nosotros" class="btn btn-secondary" style="margin-top:22px;align-self:flex-start">Meet the founder &rarr;</a>
@@ -187,13 +190,14 @@ const faqs = (await getCollection('faqs', ({ id }) => id.startsWith('en/')))
         </div>
         <div class="field"><label for="f-case">Case type</label>
           <select id="f-case" class="input" name="caso">
+            <option>EB-2 NIW Visa</option>
             <option>Affirmative Asylum</option>
             <option>Defensive Asylum</option>
-            <option>EB-2 NIW Visa</option>
-            <option>SIJS (Special Immigrant Juvenile)</option>
             <option>U Visa</option>
-            <option>Marriage dissolution</option>
-            <option>Case planning</option>
+            <option>SIJS (Juvenile Visa)</option>
+            <option>B1/B2 Visa</option>
+            <option>Adjustment of Status</option>
+            <option>Consular Processing</option>
             <option>Not sure / Other</option>
           </select>
         </div>

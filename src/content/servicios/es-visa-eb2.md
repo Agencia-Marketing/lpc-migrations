@@ -5,7 +5,7 @@ urlSlug: visa-eb2
 description: Preparación de la petición por Interés Nacional para perfiles profesionales con maestría o doctorado y experiencia.
 descriptionEn: National Interest Waiver petition preparation for professionals with master's or doctoral degrees and experience.
 icon: briefcase
-order: 2
+order: 3
 ---
 
 **LPC Services prepara tu petición EB-2 por Interés Nacional (NIW).** Este proceso permite a profesionales altamente calificados obtener una tarjeta de residencia sin necesidad de una oferta de empleo ni certificación laboral.

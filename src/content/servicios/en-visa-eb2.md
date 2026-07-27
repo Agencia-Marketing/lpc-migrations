@@ -5,7 +5,7 @@ urlSlug: visa-eb2
 description: National Interest Waiver petition preparation for professionals with advanced degrees and significant experience.
 descriptionEn: National Interest Waiver petition preparation for professionals with advanced degrees and significant experience.
 icon: briefcase
-order: 2
+order: 3
 ---
 
 **LPC Services prepares your EB-2 National Interest Waiver (NIW) petition.** This pathway allows highly qualified professionals to obtain a green card without needing a job offer or labor certification.

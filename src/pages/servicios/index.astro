@@ -9,7 +9,7 @@ const servicios = (await getCollection('servicios', ({ id }) => id.startsWith('e
 
 <Layout
   title="Servicios"
-  description="Conozca nuestros servicios de preparación de documentos migratorios: asilo afirmativo, visa EB-2 NIW, visa U y más."
+  description="Preparación de documentos migratorios: visa EB-2 NIW, asilo afirmativo y defensivo, visa U, visa juvenil (SIJS), visa B1/B2, ajuste de estatus y proceso consular."
   lang="es"
 >
   <section style="background:var(--color-accent-800);color:#fff;padding:40px 0 42px">
@@ -33,6 +33,7 @@ const servicios = (await getCollection('servicios', ({ id }) => id.startsWith('e
                 {svc.data.icon === 'briefcase' && <><rect x="4" y="3" width="16" height="18"/><path d="M9 3v3h6V3M8 11h8M8 15h5"/></>}
                 {svc.data.icon === 'shield' && <><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></>}
                 {svc.data.icon === 'heart' && <><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5 7 22l5-3 5 3-1.5-9.5"/></>}
+                {svc.data.icon === 'scale' && <><path d="M12 3v18M7 21h10M4 7h16"/><path d="M6 7 3 14a3 3 0 0 0 6 0L6 7z"/><path d="M18 7l-3 7a3 3 0 0 0 6 0l-3-7z"/></>}
               </svg>
               <div>
                 <span style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-deep);font-weight:600">{String(svc.data.order).padStart(2, '0')}</span>
@@ -49,6 +50,13 @@ const servicios = (await getCollection('servicios', ({ id }) => id.startsWith('e
           </a>
         ))
       }
+    </div>
+    <div class="wrap" style="padding-top:26px;display:flex;flex-wrap:wrap;align-items:center;gap:10px">
+      <span style="font-size:13px;color:var(--color-text-muted)">También atendemos:</span>
+      <span class="tag">Visa Juvenil (SIJS)</span>
+      <span class="tag">Visa B1/B2</span>
+      <span class="tag">Ajuste de estatus</span>
+      <span class="tag">Proceso consular</span>
     </div>
   </section>
 

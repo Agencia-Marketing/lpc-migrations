@@ -74,6 +74,7 @@ const faqs = (await getCollection('faqs', ({ id }) => id.startsWith('es/')))
               {svc.data.icon === 'briefcase' && <><rect x="4" y="3" width="16" height="18"/><path d="M9 3v3h6V3M8 11h8M8 15h5"/></>}
               {svc.data.icon === 'shield' && <><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></>}
               {svc.data.icon === 'heart' && <><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5 7 22l5-3 5 3-1.5-9.5"/></>}
+              {svc.data.icon === 'scale' && <><path d="M12 3v18M7 21h10M4 7h16"/><path d="M6 7 3 14a3 3 0 0 0 6 0L6 7z"/><path d="M18 7l-3 7a3 3 0 0 0 6 0l-3-7z"/></>}
             </svg>
             <span style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-deep);margin-top:20px">{String(svc.data.order).padStart(2, '0')}</span>
             <h3 style="font-family:var(--font-heading);font-weight:800;font-size:20px;margin:6px 0 0">{svc.data.title}</h3>
@@ -86,9 +87,11 @@ const faqs = (await getCollection('faqs', ({ id }) => id.startsWith('es/')))
       }
     </div>
     <div class="wrap" style="padding-top:24px;padding-bottom:8px;display:flex;flex-wrap:wrap;align-items:center;gap:10px">
-      <span style="font-size:13px;color:var(--color-text-muted)">También:</span>
-      <a href="/servicios/visa-u" class="tag" style="text-decoration:none">Visa U (víctimas de delito) &rarr;</a>
-      <span class="tag">Disolución de matrimonios</span>
+      <span style="font-size:13px;color:var(--color-text-muted)">También atendemos:</span>
+      <span class="tag">Visa Juvenil (SIJS)</span>
+      <span class="tag">Visa B1/B2</span>
+      <span class="tag">Ajuste de estatus</span>
+      <span class="tag">Proceso consular</span>
     </div>
   </section>
 
@@ -109,15 +112,15 @@ const faqs = (await getCollection('faqs', ({ id }) => id.startsWith('es/')))
         <div style="display:grid;grid-template-columns:1fr;gap:0;border-top:2px solid var(--color-divider)">
           <div style="display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--color-divider)">
             <span style="font-family:var(--font-heading);font-weight:800;color:var(--gold);font-size:13px;min-width:20px">✦</span>
-            <div><p style="font-size:14px;font-weight:600;margin:0">Analista en Preparación de Casos Migratorios</p><p style="font-size:12.5px;color:var(--color-text-muted);margin:2px 0 0">Oficina Legal del Abogado David Stewart, EE. UU. · 2024–presente</p></div>
+            <div><p style="font-size:14px;font-weight:600;margin:0">Analista Externo de Casos Migratorios</p><p style="font-size:12.5px;color:var(--color-text-muted);margin:2px 0 0">Oficina Legal del Abogado David Stuart, EE. UU. · 2024–presente</p></div>
           </div>
           <div style="display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--color-divider)">
             <span style="font-family:var(--font-heading);font-weight:800;color:var(--gold);font-size:13px;min-width:20px">✦</span>
-            <div><p style="font-size:14px;font-weight:600;margin:0">Formación especializada en Derecho Migratorio (EE. UU.)</p><p style="font-size:12.5px;color:var(--color-text-muted);margin:2px 0 0">Asilo Defensivo · Peticiones familiares · Waivers · U Visa · FOIA</p></div>
+            <div><p style="font-size:14px;font-weight:600;margin:0">Formación especializada en Derecho Migratorio (EE. UU.)</p><p style="font-size:12.5px;color:var(--color-text-muted);margin:2px 0 0">Asilo Defensivo · Visa Juvenil (SIJS) · Visa B1/B2 · Visa EB-2 NIW · Peticiones familiares · Waivers · U Visa · FOIA</p></div>
           </div>
           <div style="display:flex;gap:14px;padding:14px 0">
             <span style="font-family:var(--font-heading);font-weight:800;color:var(--gold);font-size:13px;min-width:20px">✦</span>
-            <div><p style="font-size:14px;font-weight:600;margin:0">Grado Asociado en Estudios Paralegales — en curso</p><p style="font-size:12.5px;color:var(--color-text-muted);margin:2px 0 0">Kelbert University, EE. UU. · finalización est. mayo 2027</p></div>
+            <div><p style="font-size:14px;font-weight:600;margin:0">Grado Asociado en Estudios Paralegales — en curso</p><p style="font-size:12.5px;color:var(--color-text-muted);margin:2px 0 0">Kelbert University, EE. UU. · finalización est. diciembre 2026</p></div>
           </div>
         </div>
         <a href="/nosotros" class="btn btn-secondary" style="margin-top:22px;align-self:flex-start">Conozca al fundador &rarr;</a>
@@ -193,13 +196,14 @@ const faqs = (await getCollection('faqs', ({ id }) => id.startsWith('es/')))
         </div>
         <div class="field"><label for="f-caso">Tipo de caso</label>
           <select id="f-caso" class="input" name="caso">
+            <option>Visa EB-2 NIW</option>
             <option>Asilo Afirmativo</option>
             <option>Asilo Defensivo</option>
-            <option>Visa EB-2 NIW</option>
-            <option>Visa Juvenil (SIJS)</option>
             <option>Visa U</option>
-            <option>Disolución de matrimonio</option>
-            <option>Planificación de caso</option>
+            <option>Visa Juvenil (SIJS)</option>
+            <option>Visa B1/B2</option>
+            <option>Ajuste de Estatus</option>
+            <option>Proceso Consular</option>
             <option>No estoy seguro / Otro</option>
           </select>
         </div>

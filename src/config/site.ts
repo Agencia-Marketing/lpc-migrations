@@ -19,11 +19,11 @@ export const SITE = {
 } as const;
 
 export const CONTACT = {
-  phone: '+1 206 578 8205',
-  phoneHref: '+12065788205',
+  phone: '+1 206 572 5753',
+  phoneHref: '+12065725753',
   email: 'lpcimmigrationservices@gmail.com',
-  whatsApp: 'https://wa.me/12065788205',
-  whatsAppText: '+1 206 578 8205',
+  whatsApp: 'https://wa.me/12065725753',
+  whatsAppText: '+1 206 572 5753',
   hours: {
     weekdays: '9:00 a.m. – 6:00 p.m.',
     saturday: 'Con cita previa / By appointment only',

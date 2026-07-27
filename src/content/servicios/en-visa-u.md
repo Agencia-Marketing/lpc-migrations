@@ -5,7 +5,7 @@ urlSlug: visa-u
 description: Complete file preparation for the U Visa, for crime victims who assist law enforcement.
 descriptionEn: Complete file preparation for the U Visa, for crime victims who assist law enforcement.
 icon: heart
-order: 3
+order: 4
 ---
 
 **LPC Services prepares your U Visa application.** This immigration status is designed for victims of certain crimes who have suffered substantial physical or mental abuse and have cooperated with law enforcement in the investigation or prosecution of the crime.

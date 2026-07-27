@@ -1,11 +1,12 @@
 ---
 title: Affirmative Asylum
 titleEn: Affirmative Asylum
-urlSlug: asilo
-description: Preparation and organization of Form I-589 for asylum seekers who entered the United States legally.
-descriptionEn: Preparation and organization of Form I-589 for asylum seekers who entered the United States legally.
+urlSlug: asilo-afirmativo
+description: Preparation and organization of Form I-589 for people who entered with inspection and have no immigration court case.
+descriptionEn: Preparation and organization of Form I-589 for people who entered with inspection and have no immigration court case.
 icon: shield
 order: 1
+formNumber: I-589
 formNumberEn: I-589
 ---
 
@@ -22,4 +23,6 @@ formNumberEn: I-589
 
 ### Who is this for?
 
-This service is for individuals who **entered the United States legally** (with a visa, ESTA, or parole) and wish to apply for protection based on a well-founded fear of persecution in their home country.
+This service is for individuals who **entered the United States with inspection** (with a visa, ESTA, or parole), **have no open case in immigration court**, and wish to apply for protection based on a well-founded fear of persecution in their home country. The application is filed with USCIS.
+
+If you already have a case in immigration court, the applicable process is [defensive asylum](/en/servicios/asilo-defensivo).
