@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ServiceIcon from '../components/ServiceIcon.astro';
 import { SITE, CONTACT, TRUST } from '../config/site';
 import { getCollection } from 'astro:content';
 
@@ -70,12 +71,7 @@ const faqs = (await getCollection('faqs', ({ id }) => id.startsWith('es/')))
       {
         servicios.map((svc) => (
           <div style="padding:28px 22px 30px;display:flex;flex-direction:column">
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.7" style="width:30px;height:30px">
-              {svc.data.icon === 'briefcase' && <><rect x="4" y="3" width="16" height="18"/><path d="M9 3v3h6V3M8 11h8M8 15h5"/></>}
-              {svc.data.icon === 'shield' && <><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></>}
-              {svc.data.icon === 'heart' && <><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5 7 22l5-3 5 3-1.5-9.5"/></>}
-              {svc.data.icon === 'scale' && <><path d="M12 3v18M7 21h10M4 7h16"/><path d="M6 7 3 14a3 3 0 0 0 6 0L6 7z"/><path d="M18 7l-3 7a3 3 0 0 0 6 0l-3-7z"/></>}
-            </svg>
+            <ServiceIcon name={svc.data.icon} />
             <span style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-deep);margin-top:20px">{String(svc.data.order).padStart(2, '0')}</span>
             <h3 style="font-family:var(--font-heading);font-weight:800;font-size:20px;margin:6px 0 0">{svc.data.title}</h3>
             <p style="font-size:14px;line-height:1.6;color:var(--color-text-soft);margin:10px 0 0;flex:1">{svc.data.description}</p>
@@ -85,13 +81,6 @@ const faqs = (await getCollection('faqs', ({ id }) => id.startsWith('es/')))
           </div>
         ))
       }
-    </div>
-    <div class="wrap" style="padding-top:24px;padding-bottom:8px;display:flex;flex-wrap:wrap;align-items:center;gap:10px">
-      <span style="font-size:13px;color:var(--color-text-muted)">También atendemos:</span>
-      <span class="tag">Visa Juvenil (SIJS)</span>
-      <span class="tag">Visa B1/B2</span>
-      <span class="tag">Ajuste de estatus</span>
-      <span class="tag">Proceso consular</span>
     </div>
   </section>
 
@@ -234,7 +223,8 @@ const faqs = (await getCollection('faqs', ({ id }) => id.startsWith('es/')))
     .trust-grid { grid-template-columns: repeat(3, 1fr); }
     .svc-grid { grid-template-columns: repeat(3, 1fr); gap: 0; }
     .svc-grid > * { border-top: none; border-left: 2px solid var(--color-divider); }
-    .svc-grid > *:first-child { border-left: none; }
+    .svc-grid > *:nth-child(3n + 1) { border-left: none; }
+    .svc-grid > *:nth-child(n + 4) { border-top: 2px solid var(--color-divider); }
     .tst-grid { grid-template-columns: repeat(3, 1fr); gap: 0; }
     .tst-grid > * { border-top: none; border-left: 2px solid var(--color-divider); }
     .tst-grid > *:first-child { border-left: none; }

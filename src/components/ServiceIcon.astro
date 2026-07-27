@@ -1,0 +1,32 @@
+---
+/**
+ * Icono de servicio.
+ *
+ * Fuente única de los SVG usados por las tarjetas de servicio
+ * (portada y /servicios, en ambos idiomas). El nombre viene del
+ * campo `icon` del frontmatter de src/content/servicios/*.md.
+ */
+export interface Props {
+  name: string;
+  size?: number;
+}
+
+const { name, size = 30 } = Astro.props;
+---
+
+<svg
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="var(--color-accent)"
+  stroke-width="1.7"
+  style={`width:${size}px;height:${size}px;flex:none`}
+>
+  {name === 'briefcase' && <><rect x="4" y="3" width="16" height="18"/><path d="M9 3v3h6V3M8 11h8M8 15h5"/></>}
+  {name === 'shield' && <><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></>}
+  {name === 'heart' && <><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5 7 22l5-3 5 3-1.5-9.5"/></>}
+  {name === 'scale' && <><path d="M12 3v18M7 21h10M4 7h16"/><path d="M6 7 3 14a3 3 0 0 0 6 0L6 7z"/><path d="M18 7l-3 7a3 3 0 0 0 6 0l-3-7z"/></>}
+  {name === 'users' && <><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20v-1.5A4.5 4.5 0 0 1 7 14h4a4.5 4.5 0 0 1 4.5 4.5V20"/><path d="M17 5.5a3 3 0 0 1 0 5.8M18.5 20v-1.5a4.5 4.5 0 0 0-2.2-3.9"/></>}
+  {name === 'plane' && <><path d="M2 13.5 21.5 4 12 21l-2-7-8-.5z"/><path d="m10 14 4.5-6"/></>}
+  {name === 'card' && <><rect x="2.5" y="5" width="19" height="14" rx="1.5"/><circle cx="8" cy="11" r="2"/><path d="M4.5 16.5a3.6 3.6 0 0 1 7 0M14.5 10h4M14.5 13.5h4"/></>}
+  {name === 'globe' && <><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9S14.5 18.3 12 21c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></>}
+</svg>

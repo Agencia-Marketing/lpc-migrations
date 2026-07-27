@@ -10,13 +10,17 @@ formNumber: I-589
 formNumberEn: I-589
 ---
 
-**LPC Services te ayuda a preparar la documentación de tu solicitud de asilo defensivo.** Organizamos tu declaración personal, reunimos la evidencia de respaldo y traducimos los documentos necesarios para que tu expediente llegue completo y ordenado a la corte de inmigración.
+**LPC Services te ayuda a preparar la documentación de tu solicitud de asilo defensivo.** Es la vía que funciona como escudo cuando la persona ya está dentro de un proceso de remoción: la solicitud se presenta ante el juez de inmigración, no ante USCIS.
+
+### Un expediente que no deje flancos abiertos
+
+En la corte, un detalle administrativo mal resuelto puede debilitar toda la defensa: fechas que no coinciden, documentos sin traducir, testimonios que se contradicen entre sí. Por eso el respaldo técnico tiene que ser impecable. Trabajamos en dos frentes: **testimonios coherentes** entre la declaración, los formularios y las pruebas, y **evidencia clara sobre la situación en tu país de origen**.
 
 ### ¿Qué incluye este servicio?
 
 - Redacción y estructura de la declaración personal de asilo
-- Revisión de tu historia para identificar puntos clave de persecución
-- Recolección y organización de evidencia documental y de país de origen
+- Revisión cruzada de testimonios y formularios para detectar contradicciones
+- Recolección y organización de evidencia documental y de condiciones del país de origen
 - Traducciones certificadas de documentos relevantes
 - Armado del paquete completo del Formulario I-589
 - Organización del expediente según las fechas de tu proceso en corte
@@ -24,6 +28,6 @@ formNumberEn: I-589
 
 ### ¿Para quién es?
 
-Este servicio es para personas que **ingresaron sin inspección** a Estados Unidos y **ya tienen un proceso abierto en la corte de inmigración**. A diferencia del asilo afirmativo, que se presenta ante USCIS, aquí la solicitud se presenta dentro del proceso ante el juez.
+Para personas que **ingresaron sin inspección** a Estados Unidos y **ya tienen un proceso abierto en la corte de inmigración**. A diferencia del [asilo afirmativo](/servicios/asilo-afirmativo), que se presenta ante USCIS, aquí la solicitud se presenta dentro del proceso ante el juez.
 
 La representación ante la corte la lleva el abogado licenciado que atiende tu caso. LPC Services prepara y organiza la documentación; no somos una firma de abogados y no brindamos asesoría legal.

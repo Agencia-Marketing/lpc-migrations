@@ -6,6 +6,8 @@ description: National Interest Waiver petition preparation for professionals wit
 descriptionEn: National Interest Waiver petition preparation for professionals with advanced degrees and significant experience.
 icon: briefcase
 order: 3
+formNumber: I-140
+formNumberEn: I-140
 ---
 
 **LPC Services prepares your EB-2 National Interest Waiver (NIW) petition.** This pathway allows highly qualified professionals to obtain a green card without needing a job offer or labor certification.
