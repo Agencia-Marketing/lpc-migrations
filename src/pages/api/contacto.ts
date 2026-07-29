@@ -19,8 +19,12 @@ export const prerender = false;
 const SITEVERIFY_URL = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
 const RESEND_URL = 'https://api.resend.com/emails';
 
-/** Verified sending domain on the agency's Resend account. */
-const MAIL_FROM = 'LPC Services <contacto@notify.programacionconecta.com>';
+/**
+ * Verified sending domain on the agency's Resend account. Only the display
+ * name is the client's — the address must stay on a domain Resend has
+ * verified, so it cannot be a free mailbox.
+ */
+const MAIL_FROM = 'LPC Immigration Services <contacto@notify.programacionconecta.com>';
 
 type Lang = 'es' | 'en';
 
