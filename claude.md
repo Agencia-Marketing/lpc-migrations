@@ -124,5 +124,15 @@ Resumen:
   Contacto: WhatsApp y teléfono +1 206 572 5753 (fuente de verdad en
   src/config/site.ts; nunca escribirlo a mano en un componente).
 
-  Estado de despliegue: NADA publicado todavía. No hay CI; hacer push a master no
-  despliega. lpc-services.com sigue sirviendo el sitio anterior hasta la Fase 6.
+  Estado de despliegue: CUIDADO — SÍ hay CI. El proyecto de Cloudflare Pages
+  "lpc-migrations" (cuenta Programacion Agencia, b4de9830e2439fbae8c22197183b60c3)
+  está conectado a github.com/Agencia-Marketing/lpc-migrations. Hacer push a
+  master DESPLIEGA A PRODUCCIÓN de inmediato, y el dominio lpcimmigration.com ya
+  está atado a ese proyecto. Trabajar en ramas; cada rama genera su propio
+  preview aislado. lpc-services.com sigue sirviendo el sitio anterior hasta la
+  Fase 6.
+
+  Secretos de Pages: son POR ENTORNO. Una variable cargada en Production no
+  existe en Preview. El endpoint /api/contacto falla cerrado si le falta
+  TURNSTILE_SECRET o RESEND_API_KEY, así que ambos deben existir en los dos
+  entornos o el formulario devuelve error en todos los envíos.
