@@ -10,9 +10,15 @@
   },
   "placement": {
     "mode": "smart"
-  }
-  // NOTE: @astrojs/cloudflare requires a SESSION KV binding for SSR.
-  // Run: wrangler kv:namespace create SESSION
-  // Then add:
-  // "kv_namespaces": [{ "binding": "SESSION", "id": "<namespace-id>" }]
+  },
+  // Required by @astrojs/cloudflare for SSR sessions. Namespace
+  // "lpc-migrations-SESSION" lives in the "Programacion Agencia" account.
+  // When the site moves to the client's own account in Fase 6, recreate the
+  // namespace there and swap this id — a namespace id is account-scoped.
+  "kv_namespaces": [
+    {
+      "binding": "SESSION",
+      "id": "82be22a8ef87452e90465e3df6c2f536"
+    }
+  ]
 }

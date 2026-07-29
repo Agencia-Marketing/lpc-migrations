@@ -9,6 +9,9 @@ dist/
 .env
 .env.local
 .env.*.local
+# Local Miniflare secrets (TURNSTILE_SECRET, RESEND_API_KEY). Never commit.
+.dev.vars
+.dev.vars.*
 
 # ── IDE ──
 .vscode/
