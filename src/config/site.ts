@@ -22,6 +22,15 @@ export const CONTACT = {
   phone: '+1 206 572 5753',
   phoneHref: '+12065725753',
   email: 'lpcimmigrationservices@gmail.com',
+  /**
+   * Recipients for contact-form notifications. Kept separate from `email`
+   * (the address shown publicly) so delivery can be routed to a test inbox
+   * without changing what visitors see anywhere on the site.
+   *
+   * TEMPORARY: routed to the agency inbox only, so test submissions do not
+   * reach the client. Restore `email` here before the Phase 6 handover.
+   */
+  formInbox: ['programacionagencia2@gmail.com'],
   whatsApp: 'https://wa.me/12065725753',
   whatsAppText: '+1 206 572 5753',
   hours: {

@@ -147,7 +147,7 @@ export const POST: APIRoute = async ({ request, locals, clientAddress }) => {
         },
         body: JSON.stringify({
           from: MAIL_FROM,
-          to: [CONTACT.email],
+          to: [...CONTACT.formInbox],
           reply_to: email,
           subject: `Nueva consulta de ${name}${caseType ? ` — ${caseType}` : ''}`,
           text,
