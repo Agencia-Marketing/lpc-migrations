@@ -8,7 +8,7 @@
 export const SITE = {
   name: 'LPC Services',
   tagline: 'Immigration Services',
-  url: 'https://lpc-services.com',
+  url: 'https://lpcimmigration.com',
   locale: 'es',
   locales: ['es', 'en'] as const,
   defaultLocale: 'es' as const,
