@@ -130,7 +130,11 @@ const safeJson = (value: unknown) => JSON.stringify(value).replace(/</g, '\\u003
     <script type="application/ld+json" set:html={safeJson(block)} is:inline />
   ))}
 
-  <script defer is:inline src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a5ffdc6b29959fc566a7ef2"></script>
+  {/* No `defer` here: the widget reads document.currentScript to find its
+  insertion point, which is unreliable on deferred scripts across browsers.
+  Deferring it once made the bubble render inline in the sticky nav instead
+  of as a fixed bottom-right bubble. */}
+  <script is:inline src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a5ffdc6b29959fc566a7ef2"></script>
   {needsTurnstile && (
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer is:inline></script>
   )}
