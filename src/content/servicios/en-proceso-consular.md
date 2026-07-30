@@ -2,6 +2,7 @@
 title: Consular Processing
 titleEn: Consular Processing
 urlSlug: proceso-consular
+urlSlugEn: consular-processing
 description: NVC file and Form DS-260 preparation for those who must complete residence at the consulate in their country.
 descriptionEn: NVC file and Form DS-260 preparation for those who must complete residence at the consulate in their country.
 icon: globe
@@ -14,7 +15,7 @@ formNumberEn: DS-260
 
 ## How it works
 
-Unlike [adjustment of status](/en/servicios/ajuste-de-estatus), which is resolved inside the United States, consular processing usually involves two steps that must be prepared well in advance: **applying for a legal waiver** and then **leaving the country** to attend the consular appointment, before being able to re-enter legally.
+Unlike [adjustment of status](/en/services/adjustment-of-status), which is resolved inside the United States, consular processing usually involves two steps that must be prepared well in advance: **applying for a legal waiver** and then **leaving the country** to attend the consular appointment, before being able to re-enter legally.
 
 Leaving the country is a serious step with no quick way back. That is why the file must be complete and free of inconsistencies before anyone travels. Whether this route applies to your case, and when, is assessed by the licensed attorney.
 

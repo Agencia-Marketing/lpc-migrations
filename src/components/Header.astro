@@ -13,7 +13,10 @@ const servicios = (await getCollection('servicios', ({ id }) => id.startsWith(la
   .sort((a, b) => a.data.order - b.data.order);
 
 const prefix = lang === 'en' ? '/en' : '';
-const serviciosHref = `${prefix}/servicios`;
+// English services live under a translated path (/en/services), not a
+// prefixed mirror of the Spanish one (/en/servicios) — the two don't share
+// a slug scheme, so this can't be derived from `prefix` alone.
+const serviciosHref = lang === 'en' ? '/en/services' : '/servicios';
 ---
 
 <nav style="position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:16px;padding:12px 20px;background:rgba(245,244,241,0.94);backdrop-filter:blur(8px);border-bottom:2px solid var(--color-divider)">
@@ -58,7 +61,7 @@ const serviciosHref = `${prefix}/servicios`;
       <div class="dropdown-menu" role="menu">
         {
           servicios.map((svc) => {
-            const href = `${serviciosHref}/${svc.data.urlSlug}`;
+            const href = `${serviciosHref}/${lang === 'en' ? svc.data.urlSlugEn : svc.data.urlSlug}`;
             return (
               <a
                 href={href}

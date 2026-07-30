@@ -2,6 +2,7 @@
 title: U Visa
 titleEn: U Visa
 urlSlug: visa-u
+urlSlugEn: u-visa
 description: Complete file preparation for the U Visa, for crime victims who assist law enforcement.
 descriptionEn: Complete file preparation for the U Visa, for crime victims who assist law enforcement.
 icon: heart

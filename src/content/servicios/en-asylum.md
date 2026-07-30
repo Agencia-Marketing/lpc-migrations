@@ -2,6 +2,7 @@
 title: Affirmative Asylum
 titleEn: Affirmative Asylum
 urlSlug: asilo-afirmativo
+urlSlugEn: affirmative-asylum
 description: Preparation and organization of Form I-589 for people who entered with inspection and have no immigration court case.
 descriptionEn: Preparation and organization of Form I-589 for people who entered with inspection and have no immigration court case.
 icon: shield
@@ -34,6 +35,6 @@ The declaration must be **concise, chronological, and transparent**, and it must
 
 For people who **entered the United States with inspection** (with a visa, ESTA, or parole), **have no open case in immigration court**, and are seeking protection based on a well-founded fear of persecution in their home country.
 
-If you already have a case in immigration court, the applicable process is [defensive asylum](/en/servicios/asilo-defensivo).
+If you already have a case in immigration court, the applicable process is [defensive asylum](/en/services/defensive-asylum).
 
 LPC Services prepares and organizes the documentation. We are not a law firm, we do not provide legal advice, and we do not assess which immigration route applies to your case — that is determined by the licensed attorney.

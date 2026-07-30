@@ -2,6 +2,7 @@
 title: Visa B1/B2
 titleEn: B1/B2 Visa
 urlSlug: visa-b1-b2
+urlSlugEn: b1-b2-visa
 description: Preparación del formulario DS-160 y del expediente de respaldo para la visa de negocios y turismo.
 descriptionEn: DS-160 form and supporting file preparation for the business and tourism visa.
 icon: plane

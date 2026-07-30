@@ -2,6 +2,7 @@
 title: Visa EB-2 NIW
 titleEn: EB-2 NIW Visa
 urlSlug: visa-eb2
+urlSlugEn: eb2-niw-visa
 description: Preparación de la petición por Interés Nacional para perfiles profesionales con maestría o doctorado y experiencia.
 descriptionEn: National Interest Waiver petition preparation for professionals with master's or doctoral degrees and experience.
 icon: briefcase

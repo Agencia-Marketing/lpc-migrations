@@ -2,6 +2,7 @@
 title: Asilo defensivo
 titleEn: Defensive Asylum
 urlSlug: asilo-defensivo
+urlSlugEn: defensive-asylum
 description: Preparación y organización del Formulario I-589 para personas que tienen un proceso abierto en la corte de inmigración.
 descriptionEn: Preparation and organization of Form I-589 for people with an open immigration court case.
 icon: scale

@@ -1,0 +1,13 @@
+# English service URLs moved from a Spanish-slug mirror (/en/servicios/*)
+# to English slugs (/en/services/*) so the URL itself contains the terms
+# an English-speaking searcher would use. These never got indexed, but a
+# 301 protects anyone who already bookmarked or shared the old links.
+/en/servicios/asilo-afirmativo    /en/services/affirmative-asylum    301
+/en/servicios/asilo-defensivo     /en/services/defensive-asylum      301
+/en/servicios/visa-eb2            /en/services/eb2-niw-visa          301
+/en/servicios/visa-u              /en/services/u-visa                301
+/en/servicios/visa-juvenil        /en/services/sijs-juvenile-visa    301
+/en/servicios/visa-b1-b2          /en/services/b1-b2-visa            301
+/en/servicios/ajuste-de-estatus   /en/services/adjustment-of-status  301
+/en/servicios/proceso-consular    /en/services/consular-processing   301
+/en/servicios                     /en/services                       301

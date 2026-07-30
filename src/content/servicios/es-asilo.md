@@ -2,6 +2,7 @@
 title: Asilo afirmativo
 titleEn: Affirmative Asylum
 urlSlug: asilo-afirmativo
+urlSlugEn: affirmative-asylum
 description: Preparación y organización del Formulario I-589 para quienes ingresaron con inspección y no tienen un proceso en la corte de inmigración.
 descriptionEn: Preparation and organization of Form I-589 for people who entered with inspection and have no immigration court case.
 icon: shield

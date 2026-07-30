@@ -2,6 +2,7 @@
 title: Juvenile Visa (SIJS)
 titleEn: Juvenile Visa (SIJS)
 urlSlug: visa-juvenil
+urlSlugEn: sijs-juvenile-visa
 description: Special Immigrant Juvenile Status file preparation for minors who suffered abandonment, neglect, or abuse.
 descriptionEn: Special Immigrant Juvenile Status file preparation for minors who suffered abandonment, neglect, or abuse.
 icon: users

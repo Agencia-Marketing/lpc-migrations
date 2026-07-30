@@ -7,6 +7,9 @@ const serviciosSchema = z.object({
   title: z.string(),
   titleEn: z.string(),
   urlSlug: z.string(),
+  // English-language slug, distinct from urlSlug: the Spanish slug does not
+  // contain the keywords an English searcher would use.
+  urlSlugEn: z.string(),
   description: z.string(),
   descriptionEn: z.string(),
   icon: z.string().default('shield'),

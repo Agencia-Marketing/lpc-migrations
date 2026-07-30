@@ -2,6 +2,7 @@
 title: Ajuste de estatus
 titleEn: Adjustment of Status
 urlSlug: ajuste-de-estatus
+urlSlugEn: adjustment-of-status
 description: Preparación del Formulario I-485 para quienes tramitan su residencia permanente desde dentro de Estados Unidos.
 descriptionEn: Form I-485 preparation for those applying for permanent residence from inside the United States.
 icon: card

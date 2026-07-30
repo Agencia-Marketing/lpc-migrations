@@ -88,7 +88,7 @@ const faqJsonLd = {
           <span style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-deep);margin-top:20px">{String(svc.data.order).padStart(2, '0')}</span>
           <h3 style="font-family:var(--font-heading);font-weight:800;font-size:20px;margin:6px 0 0">{svc.data.titleEn}</h3>
           <p style="font-size:14px;line-height:1.6;color:var(--color-text-soft);margin:10px 0 0;flex:1">{svc.data.descriptionEn}</p>
-          <a href={`/en/servicios/${svc.data.urlSlug}`} style="font-family:var(--font-heading);font-weight:800;font-size:13px;text-decoration:none;color:var(--color-accent);margin-top:18px;display:inline-flex;align-items:center;gap:6px">
+          <a href={`/en/services/${svc.data.urlSlugEn}`} style="font-family:var(--font-heading);font-weight:800;font-size:13px;text-decoration:none;color:var(--color-accent);margin-top:18px;display:inline-flex;align-items:center;gap:6px">
             {svc.data.formNumberEn ? `Form ${svc.data.formNumberEn}` : 'View service'} &rarr;
           </a>
         </div>

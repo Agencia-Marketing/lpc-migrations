@@ -2,6 +2,7 @@
 title: B1/B2 Visa
 titleEn: B1/B2 Visa
 urlSlug: visa-b1-b2
+urlSlugEn: b1-b2-visa
 description: DS-160 form and supporting file preparation for the business and tourism visa.
 descriptionEn: DS-160 form and supporting file preparation for the business and tourism visa.
 icon: plane
@@ -23,7 +24,7 @@ formNumberEn: DS-160
 
 ## Why entering with a visa matters
 
-Entering with a visa means being **inspected at an official port of entry**, and that is on the record. A legal entry can carry weight later: someone who entered with inspection is generally in a better position to pursue [adjustment of status](/en/servicios/ajuste-de-estatus) inside the country, even if the visa has already expired. Which route applies in each case is determined by the licensed attorney.
+Entering with a visa means being **inspected at an official port of entry**, and that is on the record. A legal entry can carry weight later: someone who entered with inspection is generally in a better position to pursue [adjustment of status](/en/services/adjustment-of-status) inside the country, even if the visa has already expired. Which route applies in each case is determined by the licensed attorney.
 
 ## Who is this for?
 

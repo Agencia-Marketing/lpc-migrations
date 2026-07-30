@@ -2,6 +2,7 @@
 title: Proceso consular
 titleEn: Consular Processing
 urlSlug: proceso-consular
+urlSlugEn: consular-processing
 description: Preparación del expediente del NVC y del Formulario DS-260 para quienes deben completar su residencia ante el consulado de su país.
 descriptionEn: NVC file and Form DS-260 preparation for those who must complete residence at the consulate in their country.
 icon: globe

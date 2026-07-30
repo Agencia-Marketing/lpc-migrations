@@ -2,6 +2,7 @@
 title: Visa U
 titleEn: U Visa
 urlSlug: visa-u
+urlSlugEn: u-visa
 description: Preparación del expediente completo para la Visa U, para víctimas de delitos que colaboran con las autoridades.
 descriptionEn: Complete file preparation for the U Visa, for crime victims who assist law enforcement.
 icon: heart

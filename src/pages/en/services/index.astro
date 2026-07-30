@@ -12,6 +12,8 @@ const servicios = (await getCollection('servicios', ({ id }) => id.startsWith('e
   title="Services"
   description="Immigration document preparation: EB-2 NIW visa, affirmative and defensive asylum, U visa, SIJS juvenile visa, B1/B2 visa, adjustment of status and consular processing."
   lang="en"
+  esPath="/servicios"
+  enPath="/en/services"
 >
   <section style="background:var(--color-accent-800);color:#fff;padding:40px 0 42px">
     <div class="wrap">
@@ -26,7 +28,7 @@ const servicios = (await getCollection('servicios', ({ id }) => id.startsWith('e
       {
         servicios.map((svc) => (
           <a
-            href={`/en/servicios/${svc.data.urlSlug}`}
+            href={`/en/services/${svc.data.urlSlugEn}`}
             style="display:grid;grid-template-columns:1fr;gap:16px;padding:28px 22px;background:var(--color-surface);border:2px solid var(--color-divider);text-decoration:none;color:inherit"
           >
             <div style="display:flex;align-items:flex-start;gap:16px">

@@ -2,6 +2,7 @@
 title: Defensive Asylum
 titleEn: Defensive Asylum
 urlSlug: asilo-defensivo
+urlSlugEn: defensive-asylum
 description: Preparation and organization of Form I-589 for people with an open immigration court case.
 descriptionEn: Preparation and organization of Form I-589 for people with an open immigration court case.
 icon: scale
@@ -28,6 +29,6 @@ In court, a poorly handled administrative detail can weaken the entire defense: 
 
 ## Who is this for?
 
-For people who **entered the United States without inspection** and **already have an open case in immigration court**. Unlike [affirmative asylum](/en/servicios/asilo-afirmativo), which is filed with USCIS, here the application is filed within the proceedings before the judge.
+For people who **entered the United States without inspection** and **already have an open case in immigration court**. Unlike [affirmative asylum](/en/services/affirmative-asylum), which is filed with USCIS, here the application is filed within the proceedings before the judge.
 
 Representation before the court is handled by the licensed attorney assigned to your case. LPC Services prepares and organizes the documentation; we are not a law firm and we do not provide legal advice.
