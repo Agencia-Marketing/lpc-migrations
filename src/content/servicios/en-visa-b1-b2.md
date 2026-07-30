@@ -12,7 +12,7 @@ formNumberEn: DS-160
 
 **LPC Services prepares your B1/B2 visa application.** The B1 visa covers business travel and the B2 covers tourism, family visits, or medical treatment. We organize the DS-160 form and the supporting file presented at the consular interview.
 
-### What this service includes
+## What this service includes
 
 - Completion and review of Form DS-160
 - Organization of supporting documentation (employment, financial, and family)
@@ -21,11 +21,11 @@ formNumberEn: DS-160
 - Guidance on fee payment and consular appointment scheduling
 - Final consistency review of the file before the interview
 
-### Why entering with a visa matters
+## Why entering with a visa matters
 
 Entering with a visa means being **inspected at an official port of entry**, and that is on the record. A legal entry can carry weight later: someone who entered with inspection is generally in a better position to pursue [adjustment of status](/en/servicios/ajuste-de-estatus) inside the country, even if the visa has already expired. Which route applies in each case is determined by the licensed attorney.
 
-### Who is this for?
+## Who is this for?
 
 For people who are **outside the United States** and need a nonimmigrant visa for temporary business travel (B1) or tourism, family visits, or medical treatment (B2).
 

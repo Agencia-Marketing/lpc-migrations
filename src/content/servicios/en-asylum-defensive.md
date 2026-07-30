@@ -12,11 +12,11 @@ formNumberEn: I-589
 
 **LPC Services helps you prepare the documentation for your defensive asylum application.** This is the route that works as a shield when a person is already in removal proceedings: the application is filed before the immigration judge, not with USCIS.
 
-### A file that leaves no gaps
+## A file that leaves no gaps
 
 In court, a poorly handled administrative detail can weaken the entire defense: dates that do not match, untranslated documents, testimony that contradicts itself. That is why the technical backing has to be flawless. We work on two fronts: **consistent testimony** across the declaration, the forms, and the evidence, and **clear evidence about conditions in your home country**.
 
-### What this service includes
+## What this service includes
 
 - Drafting and structuring your personal asylum declaration
 - Cross-checking testimony and forms to catch contradictions
@@ -26,7 +26,7 @@ In court, a poorly handled administrative detail can weaken the entire defense: 
 - File organization aligned with your court dates
 - Final consistency review before submission
 
-### Who is this for?
+## Who is this for?
 
 For people who **entered the United States without inspection** and **already have an open case in immigration court**. Unlike [affirmative asylum](/en/servicios/asilo-afirmativo), which is filed with USCIS, here the application is filed within the proceedings before the judge.
 

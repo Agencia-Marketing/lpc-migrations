@@ -135,7 +135,7 @@ export const POST: APIRoute = async ({ request, locals, clientAddress }) => {
     ];
 
     const text = rows.map(([label, value]) => `${label}: ${value}`).join('\n');
-    const html = `<h2>Nueva consulta desde lpc-services.com</h2><table cellpadding="6" style="border-collapse:collapse;font-family:system-ui,sans-serif;font-size:14px">${rows
+    const html = `<h2>Nueva consulta desde lpcimmigration.com</h2><table cellpadding="6" style="border-collapse:collapse;font-family:system-ui,sans-serif;font-size:14px">${rows
       .map(
         ([label, value]) =>
           `<tr><td style="border:1px solid #ddd"><strong>${esc(label)}</strong></td><td style="border:1px solid #ddd">${esc(value).replace(/\n/g, '<br>')}</td></tr>`

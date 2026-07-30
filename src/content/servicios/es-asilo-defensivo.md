@@ -12,11 +12,11 @@ formNumberEn: I-589
 
 **LPC Services te ayuda a preparar la documentación de tu solicitud de asilo defensivo.** Es la vía que funciona como escudo cuando la persona ya está dentro de un proceso de remoción: la solicitud se presenta ante el juez de inmigración, no ante USCIS.
 
-### Un expediente que no deje flancos abiertos
+## Un expediente que no deje flancos abiertos
 
 En la corte, un detalle administrativo mal resuelto puede debilitar toda la defensa: fechas que no coinciden, documentos sin traducir, testimonios que se contradicen entre sí. Por eso el respaldo técnico tiene que ser impecable. Trabajamos en dos frentes: **testimonios coherentes** entre la declaración, los formularios y las pruebas, y **evidencia clara sobre la situación en tu país de origen**.
 
-### ¿Qué incluye este servicio?
+## ¿Qué incluye este servicio?
 
 - Redacción y estructura de la declaración personal de asilo
 - Revisión cruzada de testimonios y formularios para detectar contradicciones
@@ -26,7 +26,7 @@ En la corte, un detalle administrativo mal resuelto puede debilitar toda la defe
 - Organización del expediente según las fechas de tu proceso en corte
 - Revisión final de coherencia antes de la presentación
 
-### ¿Para quién es?
+## ¿Para quién es?
 
 Para personas que **ingresaron sin inspección** a Estados Unidos y **ya tienen un proceso abierto en la corte de inmigración**. A diferencia del [asilo afirmativo](/servicios/asilo-afirmativo), que se presenta ante USCIS, aquí la solicitud se presenta dentro del proceso ante el juez.
 

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# The contact endpoint is a POST-only SSR route with no indexable content.
+Disallow: /api/
+
+Sitemap: https://lpcimmigration.com/sitemap-index.xml

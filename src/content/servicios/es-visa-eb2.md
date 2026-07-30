@@ -12,7 +12,7 @@ formNumberEn: I-140
 
 **LPC Services prepara tu petición EB-2 por Interés Nacional (NIW).** Este proceso permite a profesionales altamente calificados obtener una tarjeta de residencia sin necesidad de una oferta de empleo ni certificación laboral.
 
-### ¿Qué incluye este servicio?
+## ¿Qué incluye este servicio?
 
 - Inventario completo de tus credenciales académicas y profesionales
 - Organización de logros, publicaciones y cartas de recomendación
@@ -20,6 +20,6 @@ formNumberEn: I-140
 - Armado documental completo de la petición I-140
 - Revisión de consistencia y presentación
 
-### ¿Para quién es?
+## ¿Para quién es?
 
 Este servicio es para profesionales con **maestría o doctorado** y **cinco o más años de experiencia** que puedan demostrar que su trabajo beneficia los intereses nacionales de Estados Unidos.

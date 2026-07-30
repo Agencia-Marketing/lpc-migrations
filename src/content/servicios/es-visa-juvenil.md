@@ -12,17 +12,17 @@ formNumberEn: I-360
 
 **LPC Services prepara y organiza el expediente de la Visa Juvenil (SIJS).** Ampara a menores que sufrieron **abandono, negligencia o maltrato** por parte de uno o ambos progenitores, y les abre la puerta a un estatus legal permanente.
 
-### La edad es el factor más crítico
+## La edad es el factor más crítico
 
 Este es el trámite donde el tiempo pesa más. La **edad límite cambia según el estado** donde vive el menor: en unas jurisdicciones la puerta se cierra al cumplir 18 años y en otras a los 21. Cumplir la mayoría de edad sin haber iniciado el proceso puede cerrar esta vía de forma definitiva.
 
 Si el menor está cerca de esa fecha, el expediente se trabaja a máxima velocidad. Escríbenos con la fecha de nacimiento y el estado donde vive: es lo primero que hay que verificar.
 
-### Si el menor trabaja con ITIN
+## Si el menor trabaja con ITIN
 
 Cuando el joven trabaja para apoyar a la familia usando un número ITIN, esos ingresos deben estar **declarados correctamente y a su propio nombre**. Un uso indebido de identidad o una declaración inconsistente complica el expediente, porque el estatus SIJS exige demostrar la situación real de dependencia económica. Revisamos esa documentación para que lo declarado y lo presentado coincidan.
 
-### ¿Qué incluye este servicio?
+## ¿Qué incluye este servicio?
 
 - Verificación de la edad límite aplicable según el estado de residencia
 - Organización de la documentación del tribunal estatal (custodia y determinaciones)
@@ -33,7 +33,7 @@ Cuando el joven trabaja para apoyar a la familia usando un número ITIN, esos in
 - Armado del paquete completo del Formulario I-360
 - Revisión final de coherencia antes de la presentación
 
-### ¿Para quién es?
+## ¿Para quién es?
 
 Para **menores de edad solteros** que se encuentran en Estados Unidos, no pueden reunificarse con uno o ambos padres por abandono, abuso o negligencia, y respecto de quienes un tribunal estatal ha emitido las determinaciones correspondientes.
 

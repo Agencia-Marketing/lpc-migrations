@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { SITE } from '../config/site';
 
 export interface Props {
   title: string;
@@ -10,6 +11,25 @@ export interface Props {
 }
 
 const { title, description, lang = 'es' } = Astro.props;
+
+// Every page exists in both languages under the same path, so the language
+// pair can be derived from the URL. Spanish lives at the root, English under
+// /en. trailingSlash is 'never', so paths are normalised without one.
+const path = Astro.url.pathname.replace(/\/+$/, '') || '/';
+const esPath = path === '/en' ? '/' : path.startsWith('/en/') ? path.slice(3) : path;
+const enPath = esPath === '/' ? '/en' : `/en${esPath}`;
+
+const absolute = (p: string) => `${SITE.url}${p}`;
+
+const canonical = absolute(lang === 'en' ? enPath : esPath);
+// hreflang needs absolute URLs and a self-referencing entry on every page —
+// without either, Google discards the whole cluster. x-default points at the
+// Spanish equivalent of this page, not at the homepage.
+const alternates = [
+  { hreflang: 'es', href: absolute(esPath) },
+  { hreflang: 'en', href: absolute(enPath) },
+  { hreflang: 'x-default', href: absolute(esPath) },
+];
 ---
 
 <!DOCTYPE html>
@@ -24,10 +44,10 @@ const { title, description, lang = 'es' } = Astro.props;
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="canonical" href={lang === 'en' ? `https://lpc-services.com/en${Astro.url.pathname.replace('/en', '')}` : `https://lpc-services.com${Astro.url.pathname}`} />
-  {lang === 'es' && <link rel="alternate" hreflang="en" href={`https://lpc-services.com/en${Astro.url.pathname}`} />}
-  {lang === 'en' && <link rel="alternate" hreflang="es" href={Astro.url.pathname.replace('/en', '') || '/'} />}
-  <link rel="alternate" hreflang="x-default" href="https://lpc-services.com/" />
+  <link rel="canonical" href={canonical} />
+  {alternates.map((alt) => (
+    <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+  ))}
   <meta name="robots" content="index, follow" />
   <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a5ffdc6b29959fc566a7ef2"></script>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer is:inline></script>

@@ -12,7 +12,7 @@ formNumberEn: I-140
 
 **LPC Services prepares your EB-2 National Interest Waiver (NIW) petition.** This pathway allows highly qualified professionals to obtain a green card without needing a job offer or labor certification.
 
-### What this service includes
+## What this service includes
 
 - Complete inventory of your academic and professional credentials
 - Organization of achievements, publications, and recommendation letters
@@ -20,6 +20,6 @@ formNumberEn: I-140
 - Complete I-140 petition document assembly
 - Consistency review and presentation
 
-### Who is this for?
+## Who is this for?
 
 This service is for professionals with a **master's or doctoral degree** and **five or more years of experience** who can demonstrate that their work benefits the national interests of the United States.
