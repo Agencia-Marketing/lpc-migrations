@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { SITE, CONTACT } from '../config/site';
+---
+
+<Layout
+  title="Aviso legal y privacidad"
+  description="Qué es y qué no es LPC Services, qué datos recogemos en el formulario de contacto y cómo los tratamos."
+  lang="es"
+  enPath="/en/legal-notice"
+>
+  <section style="background:var(--color-accent-800);color:#fff;padding:40px 0 42px">
+    <div class="wrap">
+      <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold)">Aviso legal</span>
+      <h1 style="font-family:var(--font-heading);font-weight:800;font-size:42px;letter-spacing:-0.02em;color:#fff;margin:10px 0 0">Aviso legal y privacidad</h1>
+    </div>
+  </section>
+
+  <section style="padding:44px 0 52px">
+    <div class="wrap legal" style="max-width:72ch;margin:0 auto">
+      <h2>Quiénes somos y qué no somos</h2>
+      <p>{SITE.name} prepara y organiza la documentación de procesos migratorios en Estados Unidos. <strong>No somos una firma de abogados, no ofrecemos asesoría legal y no determinamos qué vía migratoria corresponde a su caso</strong>: esa evaluación la hace un abogado licenciado en Estados Unidos.</p>
+      <p>Nuestro fundador es abogado formado en Venezuela, no licenciado para ejercer en Estados Unidos. Cuando un caso requiere representación legal, trabajamos con abogados licenciados en Estados Unidos.</p>
+
+      <h2>Qué datos recogemos y para qué</h2>
+      <p>El formulario de contacto solicita nombre, teléfono, correo electrónico y una descripción breve de su situación. Usamos estos datos únicamente para responder su consulta por WhatsApp, teléfono o correo, y no los usamos con ningún otro fin ni los vendemos a terceros.</p>
+
+      <h2>Dónde se procesan sus datos</h2>
+      <p>El formulario se envía a través de nuestro proveedor de hosting (Cloudflare) y se entrega por correo electrónico mediante un proveedor de envío transaccional (Resend). Ambos actúan como procesadores técnicos del envío, no como destinatarios del contenido de su consulta.</p>
+
+      <h2>Conservación de datos</h2>
+      <p>Conservamos la información de su consulta el tiempo necesario para darle seguimiento a su caso. Puede solicitar la eliminación de sus datos en cualquier momento escribiendo al correo de contacto.</p>
+
+      <h2>Sus derechos</h2>
+      <p>Puede solicitar acceso, corrección o eliminación de los datos que nos haya compartido escribiendo a <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a> o por WhatsApp al {CONTACT.whatsAppText}.</p>
+
+      <h2>Cambios a este aviso</h2>
+      <p>Podemos actualizar este aviso conforme evolucione el sitio o los proveedores que usamos. La fecha de la versión vigente es la de la última publicación de esta página.</p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .legal h2 { font-family: var(--font-heading); font-weight: 800; font-size: 20px; margin: 1.6em 0 0.5em; }
+  .legal h2:first-child { margin-top: 0; }
+  .legal p { font-size: 15px; line-height: 1.7; color: var(--color-text-soft); margin: 0 0 1em; }
+  .legal a { color: var(--color-accent); }
+</style>

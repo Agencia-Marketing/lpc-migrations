@@ -1,0 +1,48 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SITE, CONTACT } from '../../config/site';
+---
+
+<Layout
+  title="Legal notice and privacy"
+  description="What LPC Services is and isn't, what data the contact form collects, and how we handle it."
+  lang="en"
+  esPath="/aviso-legal"
+>
+  <section style="background:var(--color-accent-800);color:#fff;padding:40px 0 42px">
+    <div class="wrap">
+      <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold)">Legal notice</span>
+      <h1 style="font-family:var(--font-heading);font-weight:800;font-size:42px;letter-spacing:-0.02em;color:#fff;margin:10px 0 0">Legal notice and privacy</h1>
+    </div>
+  </section>
+
+  <section style="padding:44px 0 52px">
+    <div class="wrap legal" style="max-width:72ch;margin:0 auto">
+      <h2>Who we are and who we are not</h2>
+      <p>{SITE.name} prepares and organizes documentation for immigration processes in the United States. <strong>We are not a law firm, we do not provide legal advice, and we do not determine which immigration pathway applies to your case</strong>: that evaluation is made by a licensed attorney in the United States.</p>
+      <p>Our founder is an attorney educated in Venezuela, not licensed to practice in the United States. When a case requires legal representation, we work with attorneys licensed in the United States.</p>
+
+      <h2>What data we collect and why</h2>
+      <p>The contact form asks for your name, phone number, email, and a brief description of your situation. We use this information only to respond to your inquiry by WhatsApp, phone, or email, and we do not use it for any other purpose or sell it to third parties.</p>
+
+      <h2>Where your data is processed</h2>
+      <p>The form is submitted through our hosting provider (Cloudflare) and delivered by email through a transactional email provider (Resend). Both act as technical processors of the submission, not as recipients of the content of your inquiry.</p>
+
+      <h2>Data retention</h2>
+      <p>We keep your inquiry information for as long as needed to follow up on your case. You may request deletion of your data at any time by writing to our contact email.</p>
+
+      <h2>Your rights</h2>
+      <p>You may request access to, correction of, or deletion of the data you have shared with us by writing to <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a> or by WhatsApp at {CONTACT.whatsAppText}.</p>
+
+      <h2>Changes to this notice</h2>
+      <p>We may update this notice as the site or the providers we use evolve. The effective date is the date this page was last published.</p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .legal h2 { font-family: var(--font-heading); font-weight: 800; font-size: 20px; margin: 1.6em 0 0.5em; }
+  .legal h2:first-child { margin-top: 0; }
+  .legal p { font-size: 15px; line-height: 1.7; color: var(--color-text-soft); margin: 0 0 1em; }
+  .legal a { color: var(--color-accent); }
+</style>
