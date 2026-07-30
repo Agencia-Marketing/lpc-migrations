@@ -31,6 +31,7 @@ const faqJsonLd = {
   description={SITE.description}
   lang="es"
   jsonLd={[faqJsonLd]}
+  needsTurnstile
 >
   <!-- ── HERO ── -->
   <section id="top" style="background:var(--color-accent-800);position:relative;overflow:hidden">
@@ -49,7 +50,7 @@ const faqJsonLd = {
         </div>
       </div>
       <div class="hero-img" style="position:relative;min-height:360px;overflow:hidden">
-        <img src="/assets/2149828124.jpg" alt="Equipo LPC Services" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" />
+        <img src="/assets/2149828124.jpg" alt="Equipo LPC Services" width="1500" height="1000" loading="eager" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" />
         <div style="position:absolute;inset:0;background:linear-gradient(135deg, rgba(212,175,55,0.08) 0%, transparent 50%)"></div>
       </div>
     </div>
@@ -103,7 +104,7 @@ const faqJsonLd = {
   <section id="nosotros" style="padding:44px 0 48px">
     <div class="wrap nos-grid">
       <figure style="margin:0;background:var(--color-surface);border:2px solid var(--color-divider);overflow:hidden;aspect-ratio:4/5">
-        <img src="/assets/LPC.jpg" alt="Luis Alberto Pérez Castillo" style="width:100%;height:100%;object-fit:cover;display:block" />
+        <img src="/assets/LPC.jpg" alt="Luis Alberto Pérez Castillo" width="600" height="750" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block" />
       </figure>
       <div>
         <span class="section-label">Nosotros</span>

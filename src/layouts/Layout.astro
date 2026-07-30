@@ -20,6 +20,9 @@ export interface Props {
    * /en/legal-notice) — the default derivation below assumes they do. */
   esPath?: string;
   enPath?: string;
+  /** Only the 4 pages with a contact form (both home pages, both /contacto
+   * pages) need the Turnstile script — everyone else was loading it dead. */
+  needsTurnstile?: boolean;
 }
 
 const {
@@ -30,6 +33,7 @@ const {
   ogImage = '/assets/og-default.jpg',
   esPath: esPathProp,
   enPath: enPathProp,
+  needsTurnstile = false,
 } = Astro.props;
 
 // Every page exists in both languages under the same path, so the language
@@ -127,8 +131,10 @@ const safeJson = (value: unknown) => JSON.stringify(value).replace(/</g, '\\u003
     <script type="application/ld+json" set:html={safeJson(block)} />
   ))}
 
-  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a5ffdc6b29959fc566a7ef2"></script>
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer is:inline></script>
+  <script defer src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a5ffdc6b29959fc566a7ef2"></script>
+  {needsTurnstile && (
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer is:inline></script>
+  )}
 </head>
 <body>
   <a class="skip" href="#main">{lang === 'es' ? 'Saltar al contenido' : 'Skip to content'}</a>
