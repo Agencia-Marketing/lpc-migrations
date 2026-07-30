@@ -14,6 +14,13 @@ export default defineConfig({
   // Sourced from src/config/site.ts so the domain lives in exactly one place.
   site: SITE.url,
   trailingSlash: 'never',
+  // Emit /page.html instead of /page/index.html so Cloudflare Pages serves
+  // /page directly with a 200. Without this, trailingSlash:'never' pages get
+  // a 308 from Cloudflare to the folder's index (the trailing-slash form),
+  // which contradicts the canonical/sitemap URLs this project emits.
+  build: {
+    format: 'file',
+  },
   i18n: {
     defaultLocale: 'es',
     locales: ['es', 'en'],
