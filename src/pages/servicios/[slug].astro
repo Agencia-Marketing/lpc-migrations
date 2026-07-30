@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { CONTACT } from '../../config/site';
+import { CONTACT, SITE } from '../../config/site';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -17,12 +17,23 @@ const { data } = servicio;
 // print the raw markdown source, which is what was happening before: no
 // headings, no paragraphs, and literal ** markers on the page.
 const { Content } = await servicio.render();
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Inicio', item: SITE.url },
+    { '@type': 'ListItem', position: 2, name: 'Servicios', item: `${SITE.url}/servicios` },
+    { '@type': 'ListItem', position: 3, name: data.title, item: `${SITE.url}/servicios/${data.urlSlug}` },
+  ],
+};
 ---
 
 <Layout
   title={data.title}
   description={data.description}
   lang="es"
+  jsonLd={[breadcrumbJsonLd]}
 >
   <section style="background:var(--color-accent-800);color:#fff;padding:40px 0 42px">
     <div class="wrap">

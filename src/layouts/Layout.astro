@@ -2,20 +2,41 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE } from '../config/site';
+import { SITE, CONTACT, SOCIAL } from '../config/site';
 
 export interface Props {
   title: string;
   description?: string;
   lang?: 'es' | 'en';
+  /** Extra JSON-LD objects for this page (FAQPage, BreadcrumbList, ...). The
+   * ProfessionalService block is always included and does not need to be
+   * passed in. */
+  jsonLd?: object[];
+  /** Absolute or root-relative URL for og:image / twitter:image. */
+  ogImage?: string;
 }
 
-const { title, description, lang = 'es' } = Astro.props;
+const {
+  title,
+  description,
+  lang = 'es',
+  jsonLd = [],
+  ogImage = '/assets/og-default.jpg',
+} = Astro.props;
 
 // Every page exists in both languages under the same path, so the language
 // pair can be derived from the URL. Spanish lives at the root, English under
 // /en. trailingSlash is 'never', so paths are normalised without one.
-const path = Astro.url.pathname.replace(/\/+$/, '') || '/';
+//
+// build.format is 'file' (so Cloudflare Pages serves /page directly instead
+// of 308-redirecting to /page/), which means Astro.url.pathname reflects the
+// physical output filename during the static build — e.g. '/en.html' or
+// '/servicios/asilo-afirmativo.html' — not the clean served route. Strip the
+// .html/index.html suffix before deriving es/en paths from it.
+const path = Astro.url.pathname
+  .replace(/(^|\/)index\.html$/, '$1')
+  .replace(/\.html$/, '')
+  .replace(/\/+$/, '') || '/';
 const esPath = path === '/en' ? '/' : path.startsWith('/en/') ? path.slice(3) : path;
 const enPath = esPath === '/' ? '/en' : `/en${esPath}`;
 
@@ -30,6 +51,36 @@ const alternates = [
   { hreflang: 'en', href: absolute(enPath) },
   { hreflang: 'x-default', href: absolute(esPath) },
 ];
+
+const pageDescription = description ?? (lang === 'en' ? SITE.descriptionEn : SITE.description);
+const absoluteOgImage = ogImage.startsWith('http') ? ogImage : absolute(ogImage);
+
+// Remote, document-preparation service — NOT a law firm and NOT LegalService/
+// Attorney in schema.org terms, matching the copy rules in CLAUDE.md. No
+// `address`: the business has no publishable office location.
+const professionalService = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: SITE.name,
+  url: SITE.url,
+  description: `${SITE.description} ${SITE.descriptionEn}`,
+  telephone: CONTACT.phone,
+  email: CONTACT.email,
+  areaServed: { '@type': 'Country', name: 'US' },
+  availableLanguage: ['es', 'en'],
+  sameAs: [SOCIAL.instagram.url, SOCIAL.tiktok.url],
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    opens: CONTACT.hours.opens,
+    closes: CONTACT.hours.closes,
+  },
+};
+
+const jsonLdBlocks = [professionalService, ...jsonLd];
+// Guards against a "</script>" substring in any interpolated value (e.g. a
+// service description) breaking out of the JSON-LD script tag.
+const safeJson = (value: unknown) => JSON.stringify(value).replace(/</g, '\\u003c');
 ---
 
 <!DOCTYPE html>
@@ -49,6 +100,23 @@ const alternates = [
     <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
   ))}
   <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content={SITE.name} />
+  <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'es_ES'} />
+  <meta property="og:title" content={`${title} | ${SITE.name}`} />
+  {pageDescription && <meta property="og:description" content={pageDescription} />}
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={absoluteOgImage} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={`${title} | ${SITE.name}`} />
+  {pageDescription && <meta name="twitter:description" content={pageDescription} />}
+  <meta name="twitter:image" content={absoluteOgImage} />
+
+  {jsonLdBlocks.map((block) => (
+    <script type="application/ld+json" set:html={safeJson(block)} />
+  ))}
+
   <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a5ffdc6b29959fc566a7ef2"></script>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer is:inline></script>
 </head>

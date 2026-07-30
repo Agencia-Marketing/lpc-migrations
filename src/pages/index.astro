@@ -12,12 +12,25 @@ const testimonios = (await getCollection('testimonios', ({ id }) => id.startsWit
 
 const faqs = (await getCollection('faqs', ({ id }) => id.startsWith('es/')))
   .sort((a, b) => a.data.order - b.data.order);
+
+// FAQPage requires the answer text to actually be visible on the page —
+// it is, in the <details> block below.
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.data.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.data.answer },
+  })),
+};
 ---
 
 <Layout
   title="Preparación de documentos migratorios"
   description={SITE.description}
   lang="es"
+  jsonLd={[faqJsonLd]}
 >
   <!-- ── HERO ── -->
   <section id="top" style="background:var(--color-accent-800);position:relative;overflow:hidden">

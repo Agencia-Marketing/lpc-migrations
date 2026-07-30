@@ -33,6 +33,10 @@ export const CONTACT = {
   hours: {
     weekdays: '9:00 a.m. – 6:00 p.m.',
     saturday: 'Con cita previa / By appointment only',
+    // Machine-readable form of `weekdays`, for JSON-LD openingHoursSpecification.
+    // Saturday is appointment-only, not a fixed window, so it has no 24h entry.
+    opens: '09:00',
+    closes: '18:00',
   },
 } as const;
 
