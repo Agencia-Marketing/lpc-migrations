@@ -2,7 +2,6 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import WhatsAppFloat from '../components/WhatsAppFloat.astro';
 import { SITE, CONTACT, SOCIAL } from '../config/site';
 
 export interface Props {
@@ -143,7 +142,6 @@ const safeJson = (value: unknown) => JSON.stringify(value).replace(/</g, '\\u003
     <slot />
   </main>
   <Footer lang={lang} />
-  <WhatsAppFloat lang={lang} />
   <script is:inline>
     // Progressive enhancement for the contact forms. Without JS the form still
     // POSTs natively and the message is still delivered; this only replaces the

@@ -3,5 +3,8 @@ Allow: /
 
 # The contact endpoint is a POST-only SSR route with no indexable content.
 Disallow: /api/
+# Cloudflare Pages routing config, served verbatim from public/ like any
+# other static file -- not a real page.
+Disallow: /_redirects
 
 Sitemap: https://lpcimmigration.com/sitemap-index.xml
